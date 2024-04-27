@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <title>Halo 演示站点</title>
+    <link rel="stylesheet" href="themes/theme-earth/assets/dist/style.css">
+    <script src="themes/theme-earth/assets/dist/main.iife.js"></script>
+    
+    <script>
+      main.initColorScheme("system",true)
+    </script>
+  <meta name="robots" content="noindex">
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z907HJBP8W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z907HJBP8W');
+</script>
+<meta content="Halo 2.15.0-rc.1" name="generator"><script async="" defer="" data-website-id="5d26b69f-16c6-4d21-8471-590529709cd4" src="script.js"></script>
+<!-- PluginSearchWidget start -->
+<script src="plugins/PluginSearchWidget/assets/static/search-widget.iife.js" async=""></script>
+<link rel="stylesheet" href="plugins/PluginSearchWidget/assets/static/style.css">
+<!-- PluginSearchWidget end -->
+<script src="plugins/restricted-reading/assets/static/restricted-shadow.iife.js"></script><link rel="stylesheet" href="plugins/restricted-reading/assets/static/var.css"><!-- plugin-comment-widget start -->
+<script src="plugins/PluginCommentWidget/assets/static/comment-widget.iife-2.0.1.js"></script>
+<link rel="stylesheet" href="plugins/PluginCommentWidget/assets/static/style.css">
+<!-- plugin-comment-widget end -->
+<script class="pjax">
+    var autoContactFrom = []
+</script>
+<script src="plugins/PluginContactForm/assets/static/contact-form.iife-1.0.1.js"></script>
+<link rel="stylesheet" href="plugins/PluginContactForm/assets/static/style.css">
+<link rel="icon" href="logo.png">
+</head>
+  <body class="bg-slate-50 dark:bg-slate-900">
+    <header id="header-menu" class="sticky top-0 z-10 flex h-14 bg-white py-3 shadow-sm transition-all dark:bg-gray-800" x-data="{ open : false }">
+  <div class="container mx-auto flex h-full justify-between">
+    <div class="flex h-full items-center gap-6">
+      <div class="mr-2 h-full">
+        <a href="" class="inline-flex h-full items-center">
+          <img src="logo.png" alt="Logo" class="h-full w-auto">
+          
+        </a>
+      </div>
+      <ul class="hidden items-center gap-8 sm:flex">
+        <li class="relative cursor-pointer text-sm font-medium transition-all" x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+          <a class="text-gray-600 hover:text-blue-600 dark:text-slate-50 dark:hover:text-gray-300" href="">首页</a>
+          
+        </li>
+        <li class="relative cursor-pointer text-sm font-medium transition-all" x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+          <a class="text-gray-600 hover:text-blue-600 dark:text-slate-50 dark:hover:text-gray-300" href="/categories/default">默认分类</a>
+          
+        </li>
+        <li class="relative cursor-pointer text-sm font-medium transition-all" x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+          <a class="text-gray-600 hover:text-blue-600 dark:text-slate-50 dark:hover:text-gray-300" href="/moments" target="_self">瞬间</a>
+          
+        </li>
+        <li class="relative cursor-pointer text-sm font-medium transition-all" x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+          <a class="text-gray-600 hover:text-blue-600 dark:text-slate-50 dark:hover:text-gray-300" href="/photos" target="_self">图库</a>
+          
+        </li>
+        <li class="relative cursor-pointer text-sm font-medium transition-all" x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+          <a class="text-gray-600 hover:text-blue-600 dark:text-slate-50 dark:hover:text-gray-300" href="/links" target="_self">链接</a>
+          
+        </li>
+        <li class="relative cursor-pointer text-sm font-medium transition-all" x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+          <a class="text-gray-600 hover:text-blue-600 dark:text-slate-50 dark:hover:text-gray-300" href="/docs" target="_self">文档示例</a>
+          
+        </li>
+        <li class="relative cursor-pointer text-sm font-medium transition-all" x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+          <a class="text-gray-600 hover:text-blue-600 dark:text-slate-50 dark:hover:text-gray-300" href="/about">关于</a>
+          
+        </li>
+      </ul>
+    </div>
+    <div class="flex items-center">
+      <ul x-data="colorSchemeSwitcher" class="flex items-center gap-4">
+        <li class="sm:hidden" x-on:click="open = true">
+          <div class="i-tabler-menu-2 text-lg text-gray-600 hover:text-blue-600 dark:text-slate-100"></div>
+        </li>
+        <li x-data="dropdown" class="relative cursor-pointer transition-all" @mouseenter="open()" @mouseleave="close()">
+          <div class="cursor-pointer text-lg text-gray-600 transition-all hover:text-blue-600 dark:text-slate-100" :class="colorScheme.icon" @click="[main.setColorScheme(nextColorScheme.value,true), currentValue = nextColorScheme.value]" :title="`当前主题：${colorScheme.label}，点击切换为：${nextColorScheme.label}`"></div>
+        </li>
+        <!-- https://github.com/halo-sigs/plugin-search-widget -->
+        <li>
+          <a href="javascript:SearchWidget.open()" title="搜索" class="text-gray-600 hover:text-blue-600 dark:text-slate-100">
+            <div class="i-tabler-search text-lg"></div>
+          </a>
+        </li>
+        <li x-data="dropdown" class="relative cursor-pointer transition-all" @mouseenter="open()" @mouseleave="close()">
+          <div>
+            <div class="h-5 w-5 text-gray-600 hover:text-blue-600 dark:text-slate-100">
+              <img class="h-5 w-5 rounded-full" src="themes/theme-earth/assets/images/default-avatar.svg" alt="已删除用户">
+            </div>
+            <ul @mouseenter="open()" @mouseleave="close()" x-show="show" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 z-10 mt-2 w-40 divide-y divide-gray-50 overflow-hidden rounded bg-white shadow dark:divide-slate-600 dark:bg-slate-700">
+              
+              
+              
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div class="fixed inset-0 z-50 bg-gray-800/40 opacity-100 backdrop-blur-sm dark:bg-black/80" aria-hidden="true" x-show="open" x-transition:enter="ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in-out duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"></div>
+    <div class="fixed inset-x-4 top-8 z-50 origin-top scale-100 rounded-lg bg-white p-4 dark:bg-slate-900" tabindex="-1" x-show="open" x-transition:enter="ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-100" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" @click.outside="open = false">
+      <div class="flex flex-row-reverse items-center justify-between">
+        <button class="i-tabler-x p-1 text-xl text-gray-600 dark:text-slate-300" type="button" tabindex="0" @click="open = false"></button>
+        <h2 class="text-sm font-medium text-gray-600 dark:text-slate-300">菜单</h2>
+      </div>
+      <nav class="mt-6">
+        <ul class="-my-2 divide-y divide-gray-100 text-sm text-gray-800 dark:divide-slate-800 dark:text-slate-100">
+          <li>
+            <a class="flex items-center justify-between gap-1 py-2" href="">
+              <span>首页</span>
+            </a>
+            
+          </li>
+          <li>
+            <a class="flex items-center justify-between gap-1 py-2" href="/categories/default">
+              <span>默认分类</span>
+            </a>
+            
+          </li>
+          <li>
+            <a class="flex items-center justify-between gap-1 py-2" href="/moments" target="_self">
+              <span>瞬间</span>
+            </a>
+            
+          </li>
+          <li>
+            <a class="flex items-center justify-between gap-1 py-2" href="/photos" target="_self">
+              <span>图库</span>
+            </a>
+            
+          </li>
+          <li>
+            <a class="flex items-center justify-between gap-1 py-2" href="/links" target="_self">
+              <span>链接</span>
+            </a>
+            
+          </li>
+          <li>
+            <a class="flex items-center justify-between gap-1 py-2" href="/docs" target="_self">
+              <span>文档示例</span>
+            </a>
+            
+          </li>
+          <li>
+            <a class="flex items-center justify-between gap-1 py-2" href="/about">
+              <span>关于</span>
+            </a>
+            
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    
+    
+      <section>
+  <div class="bg-cover bg-center bg-no-repeat" style="background-image: url(themes/theme-earth/assets/images/default-background-2023-10-12.jpeg);">
+    
+      
+        <div class="container mx-auto py-6">
+          <div class="group grid cursor-pointer grid-cols-1 overflow-hidden rounded-xl bg-white shadow-md transition-all duration-500 hover:shadow-lg dark:bg-slate-800 sm:grid-cols-5">
+  <div class="aspect-w-16 aspect-h-9 col-span-3">
+    <a href="/archives/halo-290-released" title="初始化功能优化，Halo 2.9.0 发布">
+      <img src="upload/halo cover (Copy).png" alt="初始化功能优化，Halo 2.9.0 发布" class="h-full w-full object-cover transition-all duration-500">
+    </a>
+  </div>
+  <div class="relative col-span-2 flex flex-col gap-2 p-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/categories/halo" title="Halo" class="mr-1 text-sm font-medium text-gray-800 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-600">Halo</a>
+      <a href="/tags/cms" title="CMS" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#CMS</a><a href="/tags/halo" title="Halo" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#Halo</a>
+    </div>
+    <h1 class="cursor-pointer text-2xl font-medium transition-all line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-50 dark:hover:text-white">
+      <a href="/archives/halo-290-released">初始化功能优化，Halo 2.9.0 发布</a>
+    </h1>
+    <p class="font-sm font-light line-clamp-6 dark:text-slate-200">这个版本主要以功能优化和问题修复为主，其中包括初始化流程优化、备份恢复功能优化等。</p>
+    <div class="mt-4 flex flex-1 items-center justify-start gap-2">
+      <a href="/authors/admin" title="Administrator">
+        <img src="upload/4d29d57d-16cc-48ae-beb2-bc462f683809.png" title="Administrator" alt="Administrator" class="h-8 w-8 rounded-full border drop-shadow-sm dark:border-slate-700">
+      </a>
+      
+      <span class="text-sm tabular-nums text-gray-600 dark:text-slate-300">发布于 2023-09-01</span>
+    </div>
+  </div>
+</div>
+        </div>
+      
+      
+      
+    
+  </div>
+  
+</section>
+    
+    <section class="container mx-auto mt-6 grid grid-cols-4 gap-6">
+      <div class="z-0 col-span-4 sm:col-span-3">
+        
+    <ul id="filters" class="flex flex-wrap gap-2">
+  <li>
+    <a href="" class="inline-flex cursor-pointer items-center rounded px-2 py-1 font-medium text-gray-500 transition-all hover:bg-gray-100 hover:text-gray-900 hover:shadow-sm dark:text-slate-200 dark:hover:bg-slate-700 dark:hover:text-slate-50 !text-gray-900 !bg-gray-100 dark:!bg-slate-700 dark:!text-slate-50">
+      <span class="truncate text-base"> 全部 </span>
+    </a>
+  </li>
+  
+    <li x-data="dropdown" @mouseenter="open()" @mouseleave="close()" class="relative cursor-pointer transition-all">
+      <a href="/categories/default" class="inline-flex cursor-pointer items-center gap-1 rounded px-2 py-1 font-medium text-gray-500 transition-all hover:bg-gray-100 hover:text-gray-900 hover:shadow-sm dark:text-slate-200 dark:hover:bg-slate-700 dark:hover:text-slate-50">
+        <span class="truncate text-base">默认分类</span>
+        
+      </a>
+
+      
+    </li>
+    <li x-data="dropdown" @mouseenter="open()" @mouseleave="close()" class="relative cursor-pointer transition-all">
+      <a href="/categories/mock" class="inline-flex cursor-pointer items-center gap-1 rounded px-2 py-1 font-medium text-gray-500 transition-all hover:bg-gray-100 hover:text-gray-900 hover:shadow-sm dark:text-slate-200 dark:hover:bg-slate-700 dark:hover:text-slate-50">
+        <span class="truncate text-base">Mock</span>
+        
+      </a>
+
+      
+    </li>
+    <li x-data="dropdown" @mouseenter="open()" @mouseleave="close()" class="relative cursor-pointer transition-all">
+      <a href="/categories/halo" class="inline-flex cursor-pointer items-center gap-1 rounded px-2 py-1 font-medium text-gray-500 transition-all hover:bg-gray-100 hover:text-gray-900 hover:shadow-sm dark:text-slate-200 dark:hover:bg-slate-700 dark:hover:text-slate-50">
+        <span class="truncate text-base">Halo</span>
+        
+      </a>
+
+      
+    </li>
+  
+</ul>
+
+
+    <div id="post-list" class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 ">
+      
+        <div class="group flex flex-col overflow-hidden rounded-xl bg-white shadow-md ring-black transition-all duration-500 hover:shadow-lg dark:bg-slate-800 dark:ring-slate-700 hover:-translate-y-1 hover:ring-2 ">
+  <div class="aspect-w-16 aspect-h-9">
+    <a href="/archives/halo-290-released" title="初始化功能优化，Halo 2.9.0 发布">
+      <img src="upload/halo cover (Copy).png" alt="初始化功能优化，Halo 2.9.0 发布" class="h-full w-full object-cover transition-all duration-500 group-hover:scale-105">
+    </a>
+    
+  </div>
+  <div class="relative flex flex-col gap-2 p-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/categories/halo" title="Halo" class="mr-1 text-sm font-medium text-gray-800 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-600">Halo</a>
+      <a href="/tags/cms" title="CMS" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#CMS</a><a href="/tags/halo" title="Halo" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#Halo</a>
+    </div>
+    <h1 class="cursor-pointer text-2xl font-medium transition-all line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-50 dark:hover:text-white   sm:line-clamp-4">
+      <a href="/archives/halo-290-released" title="初始化功能优化，Halo 2.9.0 发布">初始化功能优化，Halo 2.9.0 发布</a>
+    </h1>
+    <p class="font-sm font-light line-clamp-6 dark:text-slate-200  sm:line-clamp-8">这个版本主要以功能优化和问题修复为主，其中包括初始化流程优化、备份恢复功能优化等。</p>
+    <div class="mt-4 flex flex-1 items-center justify-start gap-2">
+      <a href="/authors/admin" title="Administrator">
+        <img src="upload/4d29d57d-16cc-48ae-beb2-bc462f683809.png" title="Administrator" alt="Administrator" class="h-8 w-8 rounded-full border drop-shadow-sm dark:border-slate-700">
+      </a>
+      
+      <span class="text-sm tabular-nums text-gray-600 dark:text-slate-300">发布于 2023-09-01</span>
+    </div>
+  </div>
+</div>
+      
+        <div class="group flex flex-col overflow-hidden rounded-xl bg-white shadow-md ring-black transition-all duration-500 hover:shadow-lg dark:bg-slate-800 dark:ring-slate-700 hover:-translate-y-1 hover:ring-2 ">
+  <div class="aspect-w-16 aspect-h-9">
+    <a href="/archives/halo-240-released" title="支持三方登录认证与多语言，Halo 2.4.0 发布">
+      <img src="upload/Halo2.4.jpeg" alt="支持三方登录认证与多语言，Halo 2.4.0 发布" class="h-full w-full object-cover transition-all duration-500 group-hover:scale-105">
+    </a>
+    
+  </div>
+  <div class="relative flex flex-col gap-2 p-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/categories/halo" title="Halo" class="mr-1 text-sm font-medium text-gray-800 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-600">Halo</a>
+      <a href="/tags/halo" title="Halo" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#Halo</a><a href="/tags/cms" title="CMS" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#CMS</a>
+    </div>
+    <h1 class="cursor-pointer text-2xl font-medium transition-all line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-50 dark:hover:text-white   sm:line-clamp-4">
+      <a href="/archives/halo-240-released" title="支持三方登录认证与多语言，Halo 2.4.0 发布">支持三方登录认证与多语言，Halo 2.4.0 发布</a>
+    </h1>
+    <p class="font-sm font-light line-clamp-6 dark:text-slate-200  sm:line-clamp-8">2023 年 3 月 31 日，强大易用的开源建站工具 Halo 正式发布 2.4.0 版本。 在这一版本中，Halo 主要支持了扩展第三方登录方式以及管理端的多语言功能，并带</p>
+    <div class="mt-4 flex flex-1 items-center justify-start gap-2">
+      <a href="/authors/admin" title="Administrator">
+        <img src="upload/4d29d57d-16cc-48ae-beb2-bc462f683809.png" title="Administrator" alt="Administrator" class="h-8 w-8 rounded-full border drop-shadow-sm dark:border-slate-700">
+      </a>
+      
+      <span class="text-sm tabular-nums text-gray-600 dark:text-slate-300">发布于 2023-04-09</span>
+    </div>
+  </div>
+</div>
+      
+        <div class="group flex flex-col overflow-hidden rounded-xl bg-white shadow-md ring-black transition-all duration-500 hover:shadow-lg dark:bg-slate-800 dark:ring-slate-700 hover:-translate-y-1 hover:ring-2 ">
+  <div class="aspect-w-16 aspect-h-9">
+    <a href="/archives/halo-220-released" title="编辑器大升级，Halo 2.2.0 发布">
+      <img src="upload/Halo2.2发布.png" alt="编辑器大升级，Halo 2.2.0 发布" class="h-full w-full object-cover transition-all duration-500 group-hover:scale-105">
+    </a>
+    
+  </div>
+  <div class="relative flex flex-col gap-2 p-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/categories/halo" title="Halo" class="mr-1 text-sm font-medium text-gray-800 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-600">Halo</a>
+      <a href="/tags/halo" title="Halo" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#Halo</a><a href="/tags/cms" title="CMS" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#CMS</a>
+    </div>
+    <h1 class="cursor-pointer text-2xl font-medium transition-all line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-50 dark:hover:text-white   sm:line-clamp-4">
+      <a href="/archives/halo-220-released" title="编辑器大升级，Halo 2.2.0 发布">编辑器大升级，Halo 2.2.0 发布</a>
+    </h1>
+    <p class="font-sm font-light line-clamp-6 dark:text-slate-200  sm:line-clamp-8">2023 年 2 月 1 日，强大易用的开源建站工具 Halo 正式发布 2.2.0 版本，共优化了 10 多项问题，带来了 20 多项功能更新和优化，感谢大家的反馈和参与。 主要亮点更新 文章详情页面渲染速度优化 在之前版本中，我们均收到了在多次编辑文章或者包含大文本内容时文章渲染缓慢的问题反馈。</p>
+    <div class="mt-4 flex flex-1 items-center justify-start gap-2">
+      <a href="/authors/admin" title="Administrator">
+        <img src="upload/4d29d57d-16cc-48ae-beb2-bc462f683809.png" title="Administrator" alt="Administrator" class="h-8 w-8 rounded-full border drop-shadow-sm dark:border-slate-700">
+      </a>
+      
+      <span class="text-sm tabular-nums text-gray-600 dark:text-slate-300">发布于 2023-02-01</span>
+    </div>
+  </div>
+</div>
+      
+        <div class="group flex flex-col overflow-hidden rounded-xl bg-white shadow-md ring-black transition-all duration-500 hover:shadow-lg dark:bg-slate-800 dark:ring-slate-700 hover:-translate-y-1 hover:ring-2 ">
+  <div class="aspect-w-16 aspect-h-9">
+    <a href="/archives/halo-200-released" title="新起点丨开源建站工具 Halo 发布 2.0 版本">
+      <img src="upload/Halo2.jpg" alt="新起点丨开源建站工具 Halo 发布 2.0 版本" class="h-full w-full object-cover transition-all duration-500 group-hover:scale-105">
+    </a>
+    
+  </div>
+  <div class="relative flex flex-col gap-2 p-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/categories/halo" title="Halo" class="mr-1 text-sm font-medium text-gray-800 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-600">Halo</a>
+      <a href="/tags/halo" title="Halo" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#Halo</a><a href="/tags/cms" title="CMS" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#CMS</a>
+    </div>
+    <h1 class="cursor-pointer text-2xl font-medium transition-all line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-50 dark:hover:text-white   sm:line-clamp-4">
+      <a href="/archives/halo-200-released" title="新起点丨开源建站工具 Halo 发布 2.0 版本">新起点丨开源建站工具 Halo 发布 2.0 版本</a>
+    </h1>
+    <p class="font-sm font-light line-clamp-6 dark:text-slate-200  sm:line-clamp-8">2022 年 12 月 1 日，FIT2CLOUD 飞致云旗下开源建站项目 Halo（github.com/halo-dev）正式发布 v2.0 版本。这是 Halo 项目继 v1.0 版本后的第二个里程碑版本，研发团队采用全新架构进行项目重写，实现了从单用户机制向多用户体系的转变，提供全新设计的插</p>
+    <div class="mt-4 flex flex-1 items-center justify-start gap-2">
+      <a href="/authors/admin" title="Administrator">
+        <img src="upload/4d29d57d-16cc-48ae-beb2-bc462f683809.png" title="Administrator" alt="Administrator" class="h-8 w-8 rounded-full border drop-shadow-sm dark:border-slate-700">
+      </a>
+      
+      <span class="text-sm tabular-nums text-gray-600 dark:text-slate-300">发布于 2022-12-03</span>
+    </div>
+  </div>
+</div>
+      
+        <div class="group flex flex-col overflow-hidden rounded-xl bg-white shadow-md ring-black transition-all duration-500 hover:shadow-lg dark:bg-slate-800 dark:ring-slate-700 hover:-translate-y-1 hover:ring-2 ">
+  <div class="aspect-w-16 aspect-h-9">
+    <a href="/archives/forward-tactics-specialist" title="Forward Tactics Specialist">
+      <img src="upload/pexels-martin-mariani-3801464-min.jpg" alt="Forward Tactics Specialist" class="h-full w-full object-cover transition-all duration-500 group-hover:scale-105">
+    </a>
+    
+  </div>
+  <div class="relative flex flex-col gap-2 p-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/categories/mock" title="Mock" class="mr-1 text-sm font-medium text-gray-800 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-600">Mock</a>
+      <a href="/tags/halo" title="Halo" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#Halo</a><a href="/tags/cms" title="CMS" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#CMS</a>
+    </div>
+    <h1 class="cursor-pointer text-2xl font-medium transition-all line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-50 dark:hover:text-white   sm:line-clamp-4">
+      <a href="/archives/forward-tactics-specialist" title="Forward Tactics Specialist">Forward Tactics Specialist</a>
+    </h1>
+    <p class="font-sm font-light line-clamp-6 dark:text-slate-200  sm:line-clamp-8">Unde quos numquam asperiores itaque. Voluptatum molestiae quos eius similique iure amet quam. Aspernatur eaque in dolorum dolores earum. A deserunt ap</p>
+    <div class="mt-4 flex flex-1 items-center justify-start gap-2">
+      <a href="/authors/admin" title="Administrator">
+        <img src="upload/4d29d57d-16cc-48ae-beb2-bc462f683809.png" title="Administrator" alt="Administrator" class="h-8 w-8 rounded-full border drop-shadow-sm dark:border-slate-700">
+      </a>
+      
+      <span class="text-sm tabular-nums text-gray-600 dark:text-slate-300">发布于 2022-12-03</span>
+    </div>
+  </div>
+</div>
+      
+        <div class="group flex flex-col overflow-hidden rounded-xl bg-white shadow-md ring-black transition-all duration-500 hover:shadow-lg dark:bg-slate-800 dark:ring-slate-700 hover:-translate-y-1 hover:ring-2 ">
+  <div class="aspect-w-16 aspect-h-9">
+    <a href="/archives/global-accountability-manager" title="Global Accountability Manager">
+      <img src="upload/pexels-photosbyginny-845930-min.jpg" alt="Global Accountability Manager" class="h-full w-full object-cover transition-all duration-500 group-hover:scale-105">
+    </a>
+    
+  </div>
+  <div class="relative flex flex-col gap-2 p-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/categories/mock" title="Mock" class="mr-1 text-sm font-medium text-gray-800 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-600">Mock</a>
+      <a href="/tags/halo" title="Halo" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#Halo</a><a href="/tags/cms" title="CMS" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#CMS</a>
+    </div>
+    <h1 class="cursor-pointer text-2xl font-medium transition-all line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-50 dark:hover:text-white   sm:line-clamp-4">
+      <a href="/archives/global-accountability-manager" title="Global Accountability Manager">Global Accountability Manager</a>
+    </h1>
+    <p class="font-sm font-light line-clamp-6 dark:text-slate-200  sm:line-clamp-8">Doloremque voluptatem dolor dolor totam quia velit omnis ea aliquid. Iure voluptatem ea sint consequuntur et qui consequatur. Velit est et suscipit de</p>
+    <div class="mt-4 flex flex-1 items-center justify-start gap-2">
+      <a href="/authors/admin" title="Administrator">
+        <img src="upload/4d29d57d-16cc-48ae-beb2-bc462f683809.png" title="Administrator" alt="Administrator" class="h-8 w-8 rounded-full border drop-shadow-sm dark:border-slate-700">
+      </a>
+      
+      <span class="text-sm tabular-nums text-gray-600 dark:text-slate-300">发布于 2022-12-03</span>
+    </div>
+  </div>
+</div>
+      
+        <div class="group flex flex-col overflow-hidden rounded-xl bg-white shadow-md ring-black transition-all duration-500 hover:shadow-lg dark:bg-slate-800 dark:ring-slate-700 hover:-translate-y-1 hover:ring-2 ">
+  <div class="aspect-w-16 aspect-h-9">
+    <a href="/archives/district-assurance-consultant" title="District Assurance Consultant">
+      <img src="upload/pexels-enrique-hoyos-8264573-min.jpg" alt="District Assurance Consultant" class="h-full w-full object-cover transition-all duration-500 group-hover:scale-105">
+    </a>
+    
+  </div>
+  <div class="relative flex flex-col gap-2 p-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/categories/mock" title="Mock" class="mr-1 text-sm font-medium text-gray-800 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-600">Mock</a>
+      <a href="/tags/halo" title="Halo" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#Halo</a><a href="/tags/cms" title="CMS" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#CMS</a>
+    </div>
+    <h1 class="cursor-pointer text-2xl font-medium transition-all line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-50 dark:hover:text-white   sm:line-clamp-4">
+      <a href="/archives/district-assurance-consultant" title="District Assurance Consultant">District Assurance Consultant</a>
+    </h1>
+    <p class="font-sm font-light line-clamp-6 dark:text-slate-200  sm:line-clamp-8">Dolor ratione velit nostrum distinctio aut aut. Sunt iusto molestiae omnis ex libero aliquid quas est. Magnam quia reiciendis rerum vel aut aut minus.</p>
+    <div class="mt-4 flex flex-1 items-center justify-start gap-2">
+      <a href="/authors/admin" title="Administrator">
+        <img src="upload/4d29d57d-16cc-48ae-beb2-bc462f683809.png" title="Administrator" alt="Administrator" class="h-8 w-8 rounded-full border drop-shadow-sm dark:border-slate-700">
+      </a>
+      
+      <span class="text-sm tabular-nums text-gray-600 dark:text-slate-300">发布于 2022-12-03</span>
+    </div>
+  </div>
+</div>
+      
+        <div class="group flex flex-col overflow-hidden rounded-xl bg-white shadow-md ring-black transition-all duration-500 hover:shadow-lg dark:bg-slate-800 dark:ring-slate-700 hover:-translate-y-1 hover:ring-2 ">
+  <div class="aspect-w-16 aspect-h-9">
+    <a href="/archives/dynamic-branding-planner" title="Dynamic Branding Planner">
+      <img src="upload/pexels-tirachard-kumtanom-733857-min.jpg" alt="Dynamic Branding Planner" class="h-full w-full object-cover transition-all duration-500 group-hover:scale-105">
+    </a>
+    
+  </div>
+  <div class="relative flex flex-col gap-2 p-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/categories/mock" title="Mock" class="mr-1 text-sm font-medium text-gray-800 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-600">Mock</a>
+      <a href="/tags/halo" title="Halo" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#Halo</a><a href="/tags/cms" title="CMS" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#CMS</a>
+    </div>
+    <h1 class="cursor-pointer text-2xl font-medium transition-all line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-50 dark:hover:text-white   sm:line-clamp-4">
+      <a href="/archives/dynamic-branding-planner" title="Dynamic Branding Planner">Dynamic Branding Planner</a>
+    </h1>
+    <p class="font-sm font-light line-clamp-6 dark:text-slate-200  sm:line-clamp-8">Quasi aut vitae repellendus. Doloribus qui tempora eveniet quae enim nulla inventore nihil eius. Autem quisquam pariatur a distinctio omnis qui est. V</p>
+    <div class="mt-4 flex flex-1 items-center justify-start gap-2">
+      <a href="/authors/admin" title="Administrator">
+        <img src="upload/4d29d57d-16cc-48ae-beb2-bc462f683809.png" title="Administrator" alt="Administrator" class="h-8 w-8 rounded-full border drop-shadow-sm dark:border-slate-700">
+      </a>
+      
+      <span class="text-sm tabular-nums text-gray-600 dark:text-slate-300">发布于 2022-12-03</span>
+    </div>
+  </div>
+</div>
+      
+        <div class="group flex flex-col overflow-hidden rounded-xl bg-white shadow-md ring-black transition-all duration-500 hover:shadow-lg dark:bg-slate-800 dark:ring-slate-700 hover:-translate-y-1 hover:ring-2 ">
+  <div class="aspect-w-16 aspect-h-9">
+    <a href="/archives/district-communications-specialist" title="District Communications Specialist">
+      <img src="upload/pexels-martin-mariani-3801464-min.jpg" alt="District Communications Specialist" class="h-full w-full object-cover transition-all duration-500 group-hover:scale-105">
+    </a>
+    
+  </div>
+  <div class="relative flex flex-col gap-2 p-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/categories/mock" title="Mock" class="mr-1 text-sm font-medium text-gray-800 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-600">Mock</a>
+      <a href="/tags/halo" title="Halo" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#Halo</a><a href="/tags/cms" title="CMS" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#CMS</a>
+    </div>
+    <h1 class="cursor-pointer text-2xl font-medium transition-all line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-50 dark:hover:text-white   sm:line-clamp-4">
+      <a href="/archives/district-communications-specialist" title="District Communications Specialist">District Communications Specialist</a>
+    </h1>
+    <p class="font-sm font-light line-clamp-6 dark:text-slate-200  sm:line-clamp-8">Quas quo libero ullam expedita nesciunt. Maiores ut voluptates iusto sint sint deserunt. Qui quisquam vitae voluptates. Quis quis amet quis non nam do</p>
+    <div class="mt-4 flex flex-1 items-center justify-start gap-2">
+      <a href="/authors/admin" title="Administrator">
+        <img src="upload/4d29d57d-16cc-48ae-beb2-bc462f683809.png" title="Administrator" alt="Administrator" class="h-8 w-8 rounded-full border drop-shadow-sm dark:border-slate-700">
+      </a>
+      
+      <span class="text-sm tabular-nums text-gray-600 dark:text-slate-300">发布于 2022-12-03</span>
+    </div>
+  </div>
+</div>
+      
+        <div class="group flex flex-col overflow-hidden rounded-xl bg-white shadow-md ring-black transition-all duration-500 hover:shadow-lg dark:bg-slate-800 dark:ring-slate-700 hover:-translate-y-1 hover:ring-2 ">
+  <div class="aspect-w-16 aspect-h-9">
+    <a href="/archives/dynamic-metrics-agent" title="Dynamic Metrics Agent">
+      <img src="upload/pexels-jess-bailey-designs-876467-min.jpg" alt="Dynamic Metrics Agent" class="h-full w-full object-cover transition-all duration-500 group-hover:scale-105">
+    </a>
+    
+  </div>
+  <div class="relative flex flex-col gap-2 p-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/categories/mock" title="Mock" class="mr-1 text-sm font-medium text-gray-800 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-600">Mock</a>
+      <a href="/tags/halo" title="Halo" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#Halo</a><a href="/tags/cms" title="CMS" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#CMS</a>
+    </div>
+    <h1 class="cursor-pointer text-2xl font-medium transition-all line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-50 dark:hover:text-white   sm:line-clamp-4">
+      <a href="/archives/dynamic-metrics-agent" title="Dynamic Metrics Agent">Dynamic Metrics Agent</a>
+    </h1>
+    <p class="font-sm font-light line-clamp-6 dark:text-slate-200  sm:line-clamp-8">Facere qui facilis vel. Repellendus quae adipisci nihil molestiae repellendus ipsam corporis corrupti. Neque ducimus sed qui vel quo voluptatem rem od</p>
+    <div class="mt-4 flex flex-1 items-center justify-start gap-2">
+      <a href="/authors/admin" title="Administrator">
+        <img src="upload/4d29d57d-16cc-48ae-beb2-bc462f683809.png" title="Administrator" alt="Administrator" class="h-8 w-8 rounded-full border drop-shadow-sm dark:border-slate-700">
+      </a>
+      
+      <span class="text-sm tabular-nums text-gray-600 dark:text-slate-300">发布于 2022-12-03</span>
+    </div>
+  </div>
+</div>
+      
+        <div class="group flex flex-col overflow-hidden rounded-xl bg-white shadow-md ring-black transition-all duration-500 hover:shadow-lg dark:bg-slate-800 dark:ring-slate-700 hover:-translate-y-1 hover:ring-2 ">
+  <div class="aspect-w-16 aspect-h-9">
+    <a href="/archives/central-response-architect" title="Central Response Architect">
+      <img src="upload/pexels-engin-akyurt-4502112-min.jpg" alt="Central Response Architect" class="h-full w-full object-cover transition-all duration-500 group-hover:scale-105">
+    </a>
+    
+  </div>
+  <div class="relative flex flex-col gap-2 p-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/categories/mock" title="Mock" class="mr-1 text-sm font-medium text-gray-800 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-600">Mock</a>
+      <a href="/tags/halo" title="Halo" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#Halo</a><a href="/tags/cms" title="CMS" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#CMS</a>
+    </div>
+    <h1 class="cursor-pointer text-2xl font-medium transition-all line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-50 dark:hover:text-white   sm:line-clamp-4">
+      <a href="/archives/central-response-architect" title="Central Response Architect">Central Response Architect</a>
+    </h1>
+    <p class="font-sm font-light line-clamp-6 dark:text-slate-200  sm:line-clamp-8">Eveniet odio deleniti recusandae. In vel delectus omnis. Error et ipsum explicabo dolores optio repellat porro ipsam deserunt. Maiores facilis sunt an</p>
+    <div class="mt-4 flex flex-1 items-center justify-start gap-2">
+      <a href="/authors/admin" title="Administrator">
+        <img src="upload/4d29d57d-16cc-48ae-beb2-bc462f683809.png" title="Administrator" alt="Administrator" class="h-8 w-8 rounded-full border drop-shadow-sm dark:border-slate-700">
+      </a>
+      
+      <span class="text-sm tabular-nums text-gray-600 dark:text-slate-300">发布于 2022-12-03</span>
+    </div>
+  </div>
+</div>
+      
+        <div class="group flex flex-col overflow-hidden rounded-xl bg-white shadow-md ring-black transition-all duration-500 hover:shadow-lg dark:bg-slate-800 dark:ring-slate-700 hover:-translate-y-1 hover:ring-2 ">
+  <div class="aspect-w-16 aspect-h-9">
+    <a href="/archives/internal-tactics-administrator" title="Internal Tactics Administrator">
+      <img src="upload/pexels-zoe-pappas-1006965-min.jpg" alt="Internal Tactics Administrator" class="h-full w-full object-cover transition-all duration-500 group-hover:scale-105">
+    </a>
+    
+  </div>
+  <div class="relative flex flex-col gap-2 p-4">
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="/categories/mock" title="Mock" class="mr-1 text-sm font-medium text-gray-800 hover:text-gray-900 dark:text-slate-500 dark:hover:text-slate-600">Mock</a>
+      <a href="/tags/halo" title="Halo" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#Halo</a><a href="/tags/cms" title="CMS" class="cursor-pointer text-sm italic text-gray-600 hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-500">#CMS</a>
+    </div>
+    <h1 class="cursor-pointer text-2xl font-medium transition-all line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-50 dark:hover:text-white   sm:line-clamp-4">
+      <a href="/archives/internal-tactics-administrator" title="Internal Tactics Administrator">Internal Tactics Administrator</a>
+    </h1>
+    <p class="font-sm font-light line-clamp-6 dark:text-slate-200  sm:line-clamp-8">Provident ipsum consectetur hic voluptatum recusandae. Veniam repellendus magni ab et qui illo architecto. Quia deserunt est incidunt voluptas et. Und</p>
+    <div class="mt-4 flex flex-1 items-center justify-start gap-2">
+      <a href="/authors/admin" title="Administrator">
+        <img src="upload/4d29d57d-16cc-48ae-beb2-bc462f683809.png" title="Administrator" alt="Administrator" class="h-8 w-8 rounded-full border drop-shadow-sm dark:border-slate-700">
+      </a>
+      
+      <span class="text-sm tabular-nums text-gray-600 dark:text-slate-300">发布于 2022-12-03</span>
+    </div>
+  </div>
+</div>
+      
+    </div>
+
+    
+
+    <div class="mt-6 flex items-center justify-between">
+      <a href="" class="whitespace-no-wrap group inline-flex items-center justify-center gap-1 rounded-md border border-gray-200 bg-white px-4 py-1 text-sm font-medium leading-6 text-gray-600 shadow-sm hover:bg-gray-50 focus:shadow-none focus:outline-none dark:border-slate-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white">
+        <span class="i-tabler-arrow-left text-lg transition-all group-hover:-translate-x-1"></span>
+        <span>上一页</span>
+      </a>
+      <span class="text-sm text-gray-900 dark:text-slate-50">1 / 10</span>
+      <a href="/page/2" class="whitespace-no-wrap group inline-flex items-center justify-center gap-1 rounded-md border border-gray-200 bg-white px-4 py-1 text-sm font-medium leading-6 text-gray-600 shadow-sm hover:bg-gray-50 focus:shadow-none focus:outline-none dark:border-slate-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white">
+        <span>下一页</span>
+        <span class="i-tabler-arrow-right text-lg transition-all group-hover:translate-x-1"></span>
+      </a>
+    </div>
+  
+      </div>
+      
+      
+        <aside class="z-0 col-span-1 hidden h-full flex-col gap-6 sm:flex">
+  
+    
+    
+      <div class="w-full cursor-pointer overflow-hidden rounded-xl bg-white p-3 shadow transition-all duration-500 hover:shadow-md dark:bg-slate-800">
+  <h2 class="inline-flex items-center gap-2 text-base dark:text-slate-50">
+    <span class="i-tabler-stairs-up text-lg text-red-600 dark:text-red-700"></span>
+    热门文章
+  </h2>
+  <div>
+    <ul role="list" class="divide-y divide-gray-100 dark:divide-slate-700">
+      <li class="py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col gap-1">
+            <h3 class="text-sm font-medium line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-100">
+              <a href="/archives/halo-290-released" title="初始化功能优化，Halo 2.9.0 发布">初始化功能优化，Halo 2.9.0 发布</a>
+            </h3>
+            <p class="text-xs tabular-nums text-gray-500 dark:text-slate-400">2023-09-01 发布</p>
+          </div>
+          <div class="inline-flex items-center gap-1 text-xs text-gray-600 dark:text-slate-500">
+            <span class="i-tabler-eye"></span>
+            <span class="tabular-nums">42</span>
+          </div>
+        </div>
+      </li>
+      <li class="py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col gap-1">
+            <h3 class="text-sm font-medium line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-100">
+              <a href="/archives/halo-240-released" title="支持三方登录认证与多语言，Halo 2.4.0 发布">支持三方登录认证与多语言，Halo 2.4.0 发布</a>
+            </h3>
+            <p class="text-xs tabular-nums text-gray-500 dark:text-slate-400">2023-04-09 发布</p>
+          </div>
+          <div class="inline-flex items-center gap-1 text-xs text-gray-600 dark:text-slate-500">
+            <span class="i-tabler-eye"></span>
+            <span class="tabular-nums">32</span>
+          </div>
+        </div>
+      </li>
+      <li class="py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col gap-1">
+            <h3 class="text-sm font-medium line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-100">
+              <a href="/archives/halo-220-released" title="编辑器大升级，Halo 2.2.0 发布">编辑器大升级，Halo 2.2.0 发布</a>
+            </h3>
+            <p class="text-xs tabular-nums text-gray-500 dark:text-slate-400">2023-02-01 发布</p>
+          </div>
+          <div class="inline-flex items-center gap-1 text-xs text-gray-600 dark:text-slate-500">
+            <span class="i-tabler-eye"></span>
+            <span class="tabular-nums">11</span>
+          </div>
+        </div>
+      </li>
+      <li class="py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col gap-1">
+            <h3 class="text-sm font-medium line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-100">
+              <a href="/archives/halo-200-released" title="新起点丨开源建站工具 Halo 发布 2.0 版本">新起点丨开源建站工具 Halo 发布 2.0 版本</a>
+            </h3>
+            <p class="text-xs tabular-nums text-gray-500 dark:text-slate-400">2022-12-03 发布</p>
+          </div>
+          <div class="inline-flex items-center gap-1 text-xs text-gray-600 dark:text-slate-500">
+            <span class="i-tabler-eye"></span>
+            <span class="tabular-nums">17</span>
+          </div>
+        </div>
+      </li>
+      <li class="py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col gap-1">
+            <h3 class="text-sm font-medium line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-100">
+              <a href="/archives/forward-tactics-specialist" title="Forward Tactics Specialist">Forward Tactics Specialist</a>
+            </h3>
+            <p class="text-xs tabular-nums text-gray-500 dark:text-slate-400">2022-12-03 发布</p>
+          </div>
+          <div class="inline-flex items-center gap-1 text-xs text-gray-600 dark:text-slate-500">
+            <span class="i-tabler-eye"></span>
+            <span class="tabular-nums">0</span>
+          </div>
+        </div>
+      </li>
+      <li class="py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col gap-1">
+            <h3 class="text-sm font-medium line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-100">
+              <a href="/archives/global-accountability-manager" title="Global Accountability Manager">Global Accountability Manager</a>
+            </h3>
+            <p class="text-xs tabular-nums text-gray-500 dark:text-slate-400">2022-12-03 发布</p>
+          </div>
+          <div class="inline-flex items-center gap-1 text-xs text-gray-600 dark:text-slate-500">
+            <span class="i-tabler-eye"></span>
+            <span class="tabular-nums">0</span>
+          </div>
+        </div>
+      </li>
+      <li class="py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col gap-1">
+            <h3 class="text-sm font-medium line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-100">
+              <a href="/archives/district-assurance-consultant" title="District Assurance Consultant">District Assurance Consultant</a>
+            </h3>
+            <p class="text-xs tabular-nums text-gray-500 dark:text-slate-400">2022-12-03 发布</p>
+          </div>
+          <div class="inline-flex items-center gap-1 text-xs text-gray-600 dark:text-slate-500">
+            <span class="i-tabler-eye"></span>
+            <span class="tabular-nums">0</span>
+          </div>
+        </div>
+      </li>
+      <li class="py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col gap-1">
+            <h3 class="text-sm font-medium line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-100">
+              <a href="/archives/dynamic-branding-planner" title="Dynamic Branding Planner">Dynamic Branding Planner</a>
+            </h3>
+            <p class="text-xs tabular-nums text-gray-500 dark:text-slate-400">2022-12-03 发布</p>
+          </div>
+          <div class="inline-flex items-center gap-1 text-xs text-gray-600 dark:text-slate-500">
+            <span class="i-tabler-eye"></span>
+            <span class="tabular-nums">4</span>
+          </div>
+        </div>
+      </li>
+      <li class="py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col gap-1">
+            <h3 class="text-sm font-medium line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-100">
+              <a href="/archives/district-communications-specialist" title="District Communications Specialist">District Communications Specialist</a>
+            </h3>
+            <p class="text-xs tabular-nums text-gray-500 dark:text-slate-400">2022-12-03 发布</p>
+          </div>
+          <div class="inline-flex items-center gap-1 text-xs text-gray-600 dark:text-slate-500">
+            <span class="i-tabler-eye"></span>
+            <span class="tabular-nums">1</span>
+          </div>
+        </div>
+      </li>
+      <li class="py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col gap-1">
+            <h3 class="text-sm font-medium line-clamp-2 hover:text-gray-500 hover:underline dark:text-slate-100">
+              <a href="/archives/dynamic-metrics-agent" title="Dynamic Metrics Agent">Dynamic Metrics Agent</a>
+            </h3>
+            <p class="text-xs tabular-nums text-gray-500 dark:text-slate-400">2022-12-03 发布</p>
+          </div>
+          <div class="inline-flex items-center gap-1 text-xs text-gray-600 dark:text-slate-500">
+            <span class="i-tabler-eye"></span>
+            <span class="tabular-nums">0</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    
+      <div class="w-full cursor-pointer overflow-hidden rounded-xl bg-white p-3 shadow transition-all duration-500 hover:shadow-md dark:bg-slate-800">
+  <h2 class="inline-flex items-center gap-2 text-base dark:text-slate-50">
+    <span class="i-tabler-category text-lg"></span>
+    分类目录
+  </h2>
+  <div class="mt-2">
+    <ul class="space-y-1">
+      <li>
+    <a href="/categories/default" title="默认分类" class="group flex items-center justify-between rounded py-1 px-1.5 transition-all hover:bg-gray-100 dark:hover:bg-slate-700">
+      <span class="text-sm opacity-80 dark:text-slate-50">默认分类</span>
+      <span class="rounded bg-gray-100 py-0.5 px-1 text-xs tabular-nums opacity-70 group-hover:bg-white dark:bg-slate-600 dark:text-slate-50 dark:group-hover:bg-slate-500">56</span>
+    </a>
+    
+  </li><li>
+    <a href="/categories/mock" title="Mock" class="group flex items-center justify-between rounded py-1 px-1.5 transition-all hover:bg-gray-100 dark:hover:bg-slate-700">
+      <span class="text-sm opacity-80 dark:text-slate-50">Mock</span>
+      <span class="rounded bg-gray-100 py-0.5 px-1 text-xs tabular-nums opacity-70 group-hover:bg-white dark:bg-slate-600 dark:text-slate-50 dark:group-hover:bg-slate-500">56</span>
+    </a>
+    
+  </li><li>
+    <a href="/categories/halo" title="Halo" class="group flex items-center justify-between rounded py-1 px-1.5 transition-all hover:bg-gray-100 dark:hover:bg-slate-700">
+      <span class="text-sm opacity-80 dark:text-slate-50">Halo</span>
+      <span class="rounded bg-gray-100 py-0.5 px-1 text-xs tabular-nums opacity-70 group-hover:bg-white dark:bg-slate-600 dark:text-slate-50 dark:group-hover:bg-slate-500">5</span>
+    </a>
+    
+  </li>
+    </ul>
+  </div>
+</div>
+
+    
+      <div class="w-full cursor-pointer overflow-hidden rounded-xl bg-white p-3 shadow transition-all duration-500 hover:shadow-md dark:bg-slate-800">
+  <div class="flex items-center justify-between">
+    <h2 class="inline-flex items-center gap-2 text-base dark:text-slate-50">
+      <span class="i-tabler-tags text-lg"></span>
+      标签
+    </h2>
+    <a class="group inline-flex items-center gap-2 text-sm text-gray-600 transition-all hover:text-gray-900 dark:text-slate-400 dark:hover:text-slate-300" href="/tags">
+      <span>更多</span>
+      <span class="i-tabler-chevron-right -translate-x-1 text-lg transition-all group-hover:translate-x-0"></span>
+    </a>
+  </div>
+  <div class="mt-2 flex flex-wrap gap-2">
+    <a href="/tags/halo" title="Halo" class="rounded bg-gray-100 px-1 py-0.5 text-sm text-gray-900 hover:bg-gray-200 dark:bg-slate-600 dark:text-slate-50 dark:hover:bg-slate-700 dark:hover:text-slate-100">
+      #Halo
+      <sup>61</sup>
+    </a><a href="/tags/cms" title="CMS" class="rounded bg-gray-100 px-1 py-0.5 text-sm text-gray-900 hover:bg-gray-200 dark:bg-slate-600 dark:text-slate-50 dark:hover:bg-slate-700 dark:hover:text-slate-100">
+      #CMS
+      <sup>60</sup>
+    </a>
+  </div>
+</div>
+
+    
+  
+</aside>
+      
+    </section>
+    
+
+<footer class="mt-10 bg-white py-8 dark:bg-slate-800">
+  <div class="container mx-auto md:flex md:justify-between md:gap-10">
+    <div class="mb-6 max-w-full md:mb-0 md:max-w-md">
+      <a href="" class="mb-6 flex items-center">
+        <img src="upload/2021/03/Adaptive256-463ca9b92e2d40268431018c07735842.png" class="mr-3 h-8" alt="Halo 演示站点">
+        <span class="self-center whitespace-nowrap text-2xl font-semibold dark:text-slate-50">Halo 演示站点</span>
+      </a>
+      <span class="text-sm font-light text-gray-600 dark:text-slate-200">好用又强大的开源建站工具。
+</span>
+    </div>
+    <div class="grid grid-cols-2 gap-8 sm:grid-cols-4 sm:gap-12">
+      
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-gray-900 dark:text-slate-50">社区</h2>
+          <ul class="text-sm text-gray-500 dark:text-slate-200">
+            <li class="mb-4">
+              <a href="index2.html" class="transition-all hover:text-gray-900 hover:underline dark:hover:text-white">官方论坛</a>
+            </li>
+            <li class="mb-4">
+              <a href="upload/2021/03/B3C27F16-4890-4633-81CC-20BA4B28F94F-2415126255c749b290312ca22d9bdeb0.jpeg" class="transition-all hover:text-gray-900 hover:underline dark:hover:text-white">微信公众号</a>
+            </li>
+            <li class="mb-4">
+              <a href="https://github.com/halo-dev/halo/issues" class="transition-all hover:text-gray-900 hover:underline dark:hover:text-white">GitHub Issues</a>
+            </li>
+            <li class="mb-4">
+              <a href="https://github.com/halo-dev/halo/discussions" class="transition-all hover:text-gray-900 hover:underline dark:hover:text-white">GitHub Discussions</a>
+            </li>
+            <li class="mb-4">
+              <a href="https://t.me/halo_dev" class="transition-all hover:text-gray-900 hover:underline dark:hover:text-white">Telegram Channel</a>
+            </li>
+            <li class="mb-4">
+              <a href="https://t.me/HaloBlog" class="transition-all hover:text-gray-900 hover:underline dark:hover:text-white">Telegram Group</a>
+            </li>
+            <li class="mb-4">
+              <a href="https://join.slack.com/t/halodev/shared_invite/zt-1j5i6vs8w-~oGKFM6R_~cpEO1irk3VVA" class="transition-all hover:text-gray-900 hover:underline dark:hover:text-white">Slack</a>
+            </li>
+          </ul>
+        </div>
+      
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-gray-900 dark:text-slate-50">关于</h2>
+          <ul class="text-sm text-gray-500 dark:text-slate-200">
+            <li class="mb-4">
+              <a href="http://docs.halo.run/" class="transition-all hover:text-gray-900 hover:underline dark:hover:text-white">官方文档</a>
+            </li>
+            <li class="mb-4">
+              <a href="https://halo.run/themes.html" class="transition-all hover:text-gray-900 hover:underline dark:hover:text-white">主题仓库</a>
+            </li>
+            <li class="mb-4">
+              <a href="https://github.com/halo-dev" class="transition-all hover:text-gray-900 hover:underline dark:hover:text-white">GitHub 组织</a>
+            </li>
+            <li class="mb-4">
+              <a href="https://gitee.com/halo-dev" class="transition-all hover:text-gray-900 hover:underline dark:hover:text-white">Gitee 组织</a>
+            </li>
+          </ul>
+        </div>
+      
+    </div>
+  </div>
+  <hr class="my-6 border-gray-200 dark:border-slate-700 sm:mx-auto lg:my-8">
+  <div class="container mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between">
+    <div class="flex flex-col space-y-1 text-center sm:text-left">
+      <span class="text-sm text-gray-500 dark:text-slate-300 sm:text-center">
+        ©
+        2024
+        <a href="" class="hover:underline">Halo 演示站点</a>. All Rights Reserved. Powered by
+        <a href="index4.html" class="hover:underline" target="_blank">Halo</a>.
+      </span>
+
+      <div class="flex flex-col gap-1 sm:flex-row">
+        <span class="block text-center text-sm text-gray-500 sm:text-left">
+          <a href="https://beian.miit.gov.cn/" class="hover:underline" target="_blank"></a>
+        </span>
+        
+      </div>
+
+      <p class="text-sm text-gray-500 dark:text-slate-300">
+        <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2023013692号</a>
+      </p>
+    </div>
+
+    <div class="mt-4 flex justify-center space-x-6 sm:mt-0">
+  
+    <a href="https://github.com/halo-dev" class="text-gray-500 hover:text-gray-900 dark:hover:text-white" title="GitHub">
+      <div class="h-5 w-5 i-simple-icons-github"></div>
+    </a>
+    
+  
+    <a href="https://t.me/halo_dev" class="text-gray-500 hover:text-gray-900 dark:hover:text-white" title="Telegram">
+      <div class="h-5 w-5 i-simple-icons-telegram"></div>
+    </a>
+    
+  
+    <a href="https://join.slack.com/t/halodev/shared_invite/zt-1j5i6vs8w-~oGKFM6R_~cpEO1irk3VVA" class="text-gray-500 hover:text-gray-900 dark:hover:text-white" title="Slack">
+      <div class="h-5 w-5 i-simple-icons-slack"></div>
+    </a>
+    
+  
+    <a href="https://space.bilibili.com/510493147" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+      <div class="h-5 w-5 i-simple-icons-bilibili"></div>
+    </a>
+    
+  
+</div>
+
+  </div>
+</footer>
+
+    
+  </body>
+</html>

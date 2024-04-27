@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Halo - 强大易用的开源建站工具</title>
+<link rel="canonical" href="index.html">
+<link rel="stylesheet" href="themes/halo-theme-official-v3/assets/dist/style.css">
+<script src="themes/halo-theme-official-v3/assets/dist/main.iife.js"></script>
+<meta property="og:site_name" content=" Halo - 强大易用的开源建站工具">
+<meta property="og:type" content="website">
+<meta property="og:title" content=" Halo - 强大易用的开源建站工具">
+<meta property="og:url" content="https://www.halo.run">
+<meta property="og:description" content="Halo 是一款强大易用的开源建站工具，配合上不同的模板与插件，可以很好地帮助你构建你心中的理想站点。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content=" Halo - 强大易用的开源建站工具">
+<meta name="twitter:url" content="https://www.halo.run">
+<meta name="twitter:description" content="Halo 是一款强大易用的开源建站工具，配合上不同的模板与插件，可以很好地帮助你构建你心中的理想站点。">
+<meta name="keywords" content="建站,网站,主题,博客主题,博客模板,网站主题,网站模板,免费建站,开源建站,开源">
+<meta name="description" content="Halo 是一款强大易用的开源建站工具，配合上不同的模板与插件，可以很好地帮助你构建你心中的理想站点。">
+<link rel="dns-prefetch" href="https://www.clarity.ms/">
+<link rel="dns-prefetch" href="https://hm.baidu.com/">
+<link rel="dns-prefetch" href="https://res.wx.qq.com/">
+<link rel="dns-prefetch" href="https://analytics.halo.run/">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+<link rel="dns-prefetch" href="https://h.clarity.ms/">
+<style>#app-releases table{width:100%}</style>
+<meta content="Halo 2.14.0" name="generator"><script src="open/js/jweixin-1.6.0.js"></script>
+<script>wx.config({debug:false,appId:"wxa2721174a1796a20",timestamp:1714234528,nonceStr:"4WRzjvub9GLe19N6",signature:"03af07bc4f4afdfdd5761bd3fb2500369668fb12",jsApiList:["updateAppMessageShareData","updateTimelineShareData"]
+});wx.ready(function () {wx.updateAppMessageShareData({title:' Halo - 强大易用的开源建站工具',desc:'',link:'https://www.halo.run/',imgUrl:'',success:function () {console.log('wechat share config success');}
+})
+wx.updateTimelineShareData({title:' Halo - 强大易用的开源建站工具',link:'https://www.halo.run/',imgUrl:'',success:function () {console.log('wechat share config success');}
+})
+});wx.error(function(res){console.error("Wechat JS-SDK config error: ",res);});</script>
+<meta content="7bd5853288b2e96ba876f1cd81bdcde9" name="360-site-verification"><meta content="codeva-c28w2gYZA1" name="baidu-site-verification"><meta content="" name="sogou_site_verification"><meta content="gRZYnaYWUQXWLvov-54i4W4-SdWlhwJt46uHU2q0eIs" name="google-site-verification"><meta content="B0DF5784F7E47C5E4B8BAD7790FEF319" name="msvalidate.01"><meta content="XEEMf+fWLHfkNmmxWmWh" name="bytedance-verification-code"><script async="" defer="" data-website-id="9480712b-6060-4a01-8c67-38dfe6264d07" src="script.js"></script>
+<script src="plugins/restricted-reading/assets/static/restricted-shadow.iife.js"></script><link rel="stylesheet" href="plugins/restricted-reading/assets/static/var.css">
+<script src="plugins/PluginCommentWidget/assets/static/comment-widget.iife-2.1.0.js"></script>
+<link rel="stylesheet" href="plugins/PluginCommentWidget/assets/static/style.css">
+<script class="pjax">
+    var autoContactFrom = []
+</script>
+<script src="plugins/PluginContactForm/assets/static/contact-form.iife-1.0.2.js"></script>
+<link rel="stylesheet" href="plugins/PluginContactForm/assets/static/style.css">
+<script src="plugins/PluginSearchWidget/assets/static/search-widget.iife.js" async=""></script>
+<link rel="stylesheet" href="plugins/PluginSearchWidget/assets/static/style.css">
+<link rel="icon" href="https://www.halo.run/themes/theme-official-v2/assets/favicons/favicon-96x96.png">
+</head>
+<body class="light bg-slate-50/50">
+<header id="header-menu" class="sticky top-0 z-10 flex h-14 bg-white py-3 shadow-sm transition-all" x-data="{ open : false }">
+<div class="container mx-auto flex h-full justify-between">
+<div class="flex h-full items-center gap-6">
+<div class="mr-2 h-full">
+<a href="index.html" class="inline-flex h-full items-center">
+<img src="upload/2022/03/logo.svg" alt="Logo" class="h-6 w-auto" width="59" height="24">
+</a>
+</div>
+<ul id="menu-items" x-data="menu" class="hidden items-center gap-3 lg:flex">
+<li x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+<a class="rounded px-2 py-1.5 text-sm tracking-wider text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900" href="index.html" target="_self">首页</a>
+</li>
+<li x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+<a class="rounded px-2 py-1.5 text-sm tracking-wider text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900" href="index1.html" target="_blank">文档</a>
+</li>
+<li x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+<a class="rounded px-2 py-1.5 text-sm tracking-wider text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900" href="store/apps.html" target="_self">应用市场</a>
+</li>
+<li x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+<a class="rounded px-2 py-1.5 text-sm tracking-wider text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900" href="archives.html" target="_self">博客</a>
+</li>
+<li x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+<a class="rounded px-2 py-1.5 text-sm tracking-wider text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900" href="index2.html" target="_blank">论坛</a>
+</li>
+<li x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+<a class="rounded px-2 py-1.5 text-sm tracking-wider text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900" href="index1.html#%E5%9C%A8%E7%BA%BF%E4%BD%93%E9%AA%8C" target="_blank">在线体验</a>
+</li>
+<li x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+<a class="rounded px-2 py-1.5 text-sm tracking-wider text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900" href="https://www.lxware.cn/halo" target="_blank">专业版</a>
+</li>
+</ul>
+</div>
+<div class="flex items-center">
+<ul class="flex items-center gap-3">
+<li class="flex size-8 items-center justify-center rounded-full text-gray-600 transition-all hover:bg-gray-100 hover:text-blue-600 lg:hidden" x-on:click="open = true">
+<span class="i-tabler-menu-2 block !size-5"></span>
+</li>
+<li>
+<a href="javascript:SearchWidget.open()" title="搜索" class="flex size-8 items-center justify-center rounded-full text-gray-600 transition-all hover:bg-gray-100 hover:text-blue-600">
+<span class="i-tabler-search block !size-5"></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div>
+<div class="fixed inset-0 z-50 bg-gray-800/40 opacity-100 backdrop-blur-sm" aria-hidden="true" x-show="open" x-transition:enter="ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in-out duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"></div>
+<div class="fixed inset-x-4 top-8 z-50 origin-top scale-100 rounded-lg bg-white p-4" tabindex="-1" x-show="open" x-transition:enter="ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-100" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" @click.outside="open = false">
+<div class="flex flex-row-reverse items-center justify-between">
+<button class="p-1 text-xl text-gray-600" type="button" tabindex="0" @click="open = false">
+<span class="i-tabler-x block"></span>
+</button>
+<h2 class="text-sm font-medium text-gray-600">菜单</h2>
+</div>
+<nav class="mt-6">
+<ul class="-my-2 divide-y divide-gray-100 text-sm text-gray-800">
+<li>
+<a class="flex items-center justify-between gap-1 py-2" href="index.html" target="_self">
+<span>首页</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between gap-1 py-2" href="index1.html" target="_blank">
+<span>文档</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between gap-1 py-2" href="store/apps.html" target="_self">
+<span>应用市场</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between gap-1 py-2" href="archives.html" target="_self">
+<span>博客</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between gap-1 py-2" href="index2.html" target="_blank">
+<span>论坛</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between gap-1 py-2" href="index1.html#%E5%9C%A8%E7%BA%BF%E4%BD%93%E9%AA%8C" target="_blank">
+<span>在线体验</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between gap-1 py-2" href="https://www.lxware.cn/halo" target="_blank">
+<span>专业版</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<script>Alpine.data("video",() =>({video:false,}));</script>
+<section x-data="video" class="relative items-center overflow-hidden bg-slate-50">
+<div class="container mx-auto">
+<div class="mt-32 grid grid-cols-1 text-center md:mt-36">
+<div class="animated fadeIn">
+<h1 class="mb-5 flex flex-wrap justify-center text-4xl font-bold leading-normal lg:text-5xl lg:leading-normal">
+<span> 强大易用的开源 </span>
+<span class="relative text-indigo-400">
+建站工具
+<svg class="absolute left-0 -mt-2 lg:-mt-3" viewbox="0 0 220 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M134.66 13.107c-10.334-.37-20.721-.5-31.12-.291l-2.6.06c-4.116.04-8.193.602-12.3.749-14.502.43-29.029 1.196-43.514 2.465-6.414.63-12.808 1.629-19.04 2.866-7.93 1.579-16.113 3.71-23.367 5.003-2.211.374-3.397-1.832-2.31-4.906.5-1.467 1.838-3.456 3.418-4.813a16.047 16.047 0 0 1 6.107-3.365c16.88-4.266 33.763-6.67 51.009-7.389C71.25 3.187 81.81 1.6 92.309.966c11.53-.65 23.097-.938 34.66-.96 7.117-.054 14.25.254 21.36.318l16.194.803 4.62.39c3.85.32 7.693.618 11.53.813 8.346.883 16.673.802 25.144 2.159 1.864.276 3.714.338 5.566.873l.717.225c6.162 1.977 7.92 3.64 7.9 7.197l-.003.203c-.017.875.05 1.772-.112 2.593-.581 2.762-4.066 4.12-8.637 3.63-13.696-1.06-27.935-3.332-42.97-4.168-11.055-.83-22.314-1.459-33.596-1.603l-.022-.332Z" fill="#D1D5DB" fill-rule="evenodd"></path>
+</svg>
+</span>
+</h1>
+<p class="mx-auto max-w-md text-sm leading-relaxed text-slate-500">配合上丰富的模板与插件，帮助你构建你心中的理想站点。</p>
+<div class="mt-6 flex items-center justify-center gap-2">
+<a class="mb-2 mr-2 inline-flex items-center gap-1.5 rounded-md border border-gray-800 bg-gray-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-900" href="category/安装指南.html" target="_blank">
+<span class="i-tabler-rocket !size-4"></span>
+<span> 快速开始 </span>
+</a>
+<div class="mb-2 mr-2 inline-flex items-center gap-1.5 rounded-md border bg-white px-5 py-2.5 text-sm font-medium text-black hover:bg-gray-200 cursor-pointer" @click="video = true">
+<span class="i-tabler-play !size-4"></span>
+<span>演示</span>
+</div>
+</div>
+<a class="group mt-5 inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-2.5 py-1.5 text-slate-400 shadow-sm transition-all hover:shadow" href="archives/halo-2.html">
+<span class="rounded-full bg-indigo-400 px-2.5 py-0 text-[12px] font-bold text-white">新版本</span>
+<span class="text-sm">优化使用体验，Halo 2.14.0 发布</span>
+<span class="i-tabler-chevron-right !size-4 transition-all group-hover:translate-x-1"></span>
+</a>
+</div>
+<div class="z-3 animated fadeIn mt-8 flex w-full transform-gpu justify-center py-10 text-center">
+<img src="upload/dashboard-2023-12-03.png" class="w-full rounded-lg shadow-lg" alt="Hero image" width="1280" height="700">
+</div>
+</div>
+</div>
+<div>
+<div class="fixed inset-0 z-50 bg-gray-800/40 opacity-100 backdrop-blur-sm" aria-hidden="true" x-show="video" x-transition:enter="ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in-out duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"></div>
+<div class="fixed inset-0 z-50 overflow-y-auto" tabindex="-1" x-show="video" x-transition:enter="ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-100" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
+<div class="flex min-h-full items-center justify-center p-4 text-center" @click="video = false">
+<div class="relative overflow-hidden rounded-lg text-left sm:w-full sm:max-w-5xl">
+<template x-if="video">
+<div class="aspect-h-9 aspect-w-16 w-full">
+<iframe src="player.html" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+</iframe>
+</div>
+</template>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white py-10">
+<div class="container mx-auto">
+<div class="grid grid-cols-2 items-center gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-12">
+<div class="group relative overflow-hidden rounded-lg border border-gray-200 bg-white">
+<div class="h-full p-4">
+<div class="flex items-center">
+<span class="iconify size-8 flex-shrink-0 text-fuchsia-600" data-icon="tabler:brand-github"></span>
+<div class="ml-4">
+<h4 class="text-2xl font-bold text-gray-900">30k+</h4>
+<p class="mt-1.5 text-sm leading-tight text-gray-500">GitHub Star</p>
+</div>
+</div>
+</div>
+<div class="absolute right-2 top-2 hidden transition-all group-hover:block">
+<a href="https://github.com/halo-dev/halo" target="_blank">
+<span class="i-tabler-external-link block text-gray-600 hover:text-gray-900"></span>
+</a>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg border border-gray-200 bg-white">
+<div class="h-full p-4">
+<div class="flex items-center">
+<span class="iconify size-8 flex-shrink-0 text-fuchsia-600" data-icon="tabler:users"></span>
+<div class="ml-4">
+<h4 class="text-2xl font-bold text-gray-900">100+</h4>
+<p class="mt-1.5 text-sm leading-tight text-gray-500">贡献者</p>
+</div>
+</div>
+</div>
+<div class="absolute right-2 top-2 hidden transition-all group-hover:block">
+<a href="https://github.com/halo-dev/halo/graphs/contributors" target="_blank">
+<span class="i-tabler-external-link block text-gray-600 hover:text-gray-900"></span>
+</a>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg border border-gray-200 bg-white">
+<div class="h-full p-4">
+<div class="flex items-center">
+<span class="iconify size-8 flex-shrink-0 text-fuchsia-600" data-icon="tabler:chart-arcs"></span>
+<div class="ml-4">
+<h4 class="text-2xl font-bold text-gray-900">128</h4>
+<p class="mt-1.5 text-sm leading-tight text-gray-500">已发布版本</p>
+</div>
+</div>
+</div>
+<div class="absolute right-2 top-2 hidden transition-all group-hover:block">
+<a href="https://github.com/halo-dev/halo/releases" target="_blank">
+<span class="i-tabler-external-link block text-gray-600 hover:text-gray-900"></span>
+</a>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg border border-gray-200 bg-white">
+<div class="h-full p-4">
+<div class="flex items-center">
+<span class="iconify size-8 flex-shrink-0 text-fuchsia-600" data-icon="tabler:brand-docker"></span>
+<div class="ml-4">
+<h4 class="text-2xl font-bold text-gray-900">2M+</h4>
+<p class="mt-1.5 text-sm leading-tight text-gray-500">Docker Pulls</p>
+</div>
+</div>
+</div>
+<div class="absolute right-2 top-2 hidden transition-all group-hover:block">
+<a href="https://hub.docker.com/r/halohub/halo" target="_blank">
+<span class="i-tabler-external-link block text-gray-600 hover:text-gray-900"></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="container mx-auto mt-16 md:mt-24">
+<div class="grid grid-cols-1 items-center gap-[30px] md:grid-cols-5">
+<div class="relative col-span-3">
+<img src="upload/feature-plugins-2024-4-15.png" alt="可插拔架构" class="transform-gpu rounded-lg shadow-lg" loading="lazy">
+</div>
+<div class="lg:ml-8 col-span-2">
+<h4 class="mb-4 text-2xl font-medium">可插拔架构</h4>
+<p class="leading-relaxed text-gray-600">Halo 采用可插拔架构，功能模块之间耦合度低、灵活性提高。支持用户按需安装、卸载插件，操作便捷。同时提供插件开发接口以确保较高扩展性和可维护性。</p>
+<ul class="mt-4 list-none space-y-2 text-slate-400">
+<li class="flex items-center gap-2">
+<span class="i-tabler-circle-check !size-4 text-indigo-600"></span>
+<span>支持在运行时安装和卸载插件</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="i-tabler-circle-check !size-4 text-indigo-600"></span>
+<span>更加方便地集成三方平台</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="i-tabler-circle-check !size-4 text-indigo-600"></span>
+<span>统一的可配置设置表单</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="i-tabler-circle-check !size-4 text-indigo-600"></span>
+<span>支持自定义模型，自动生成 RESTful API</span>
+</li>
+</ul>
+<div class="mt-4">
+<a href="user-guide/plugins.html" target="_blank" class="group inline-flex items-center text-sm text-indigo-600 duration-500 ease-in-out after:bg-indigo-600 hover:text-indigo-600">
+了解更多
+<span class="i-tabler-chevron-right !size-4 transition-all group-hover:translate-x-1"></span>
+</a>
+</div>
+</div>
+</div>
+</div><div class="container mx-auto mt-16 md:mt-24">
+<div class="grid grid-cols-1 items-center gap-[30px] md:grid-cols-5">
+<div class="relative col-span-3 order-1 md:order-2">
+<img src="upload/feature-theme-2024-4-15.png" alt="功能丰富的主题机制" class="transform-gpu rounded-lg shadow-lg" loading="lazy">
+</div>
+<div class="lg:ml-8 col-span-2 order-2 md:order-1">
+<h4 class="mb-4 text-2xl font-medium">功能丰富的主题机制</h4>
+<p class="leading-relaxed text-gray-600">Halo 提供完整的主题模板机制，用于构建前台界面。这意味着用户可以根据自己的喜好选择不同类型的主题模板来定制化自己的站点外观。</p>
+<ul class="mt-4 list-none space-y-2 text-slate-400">
+<li class="flex items-center gap-2">
+<span class="i-tabler-circle-check !size-4 text-indigo-600"></span>
+<span>动态切换主题模板</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="i-tabler-circle-check !size-4 text-indigo-600"></span>
+<span>支持实时编辑和预览效果</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="i-tabler-circle-check !size-4 text-indigo-600"></span>
+<span>多语言支持</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="i-tabler-circle-check !size-4 text-indigo-600"></span>
+<span>与插件配合实现更多功能</span>
+</li>
+</ul>
+<div class="mt-4">
+<a href="user-guide/themes.html" target="_blank" class="group inline-flex items-center text-sm text-indigo-600 duration-500 ease-in-out after:bg-indigo-600 hover:text-indigo-600">
+了解更多
+<span class="i-tabler-chevron-right !size-4 transition-all group-hover:translate-x-1"></span>
+</a>
+</div>
+</div>
+</div>
+</div><div class="container mx-auto mt-16 md:mt-24">
+<div class="grid grid-cols-1 items-center gap-[30px] md:grid-cols-5">
+<div class="relative col-span-3">
+<img src="upload/feature-editor-2024-4-15.png" alt="编辑器" class="transform-gpu rounded-lg shadow-lg" loading="lazy">
+</div>
+<div class="lg:ml-8 col-span-2">
+<h4 class="mb-4 text-2xl font-medium">编辑器</h4>
+<p class="leading-relaxed text-gray-600">Halo 的富文本编辑器提供了方便丰富的功能，包括添加标题、段落、引用、列表、代码块等元素，并支持设置样式属性、上传图片、插入视频等功能。这些工具让你的文章创作更加便捷和生动。</p>
+<ul class="mt-4 list-none space-y-2 text-slate-400">
+<li class="flex items-center gap-2">
+<span class="i-tabler-circle-check !size-4 text-indigo-600"></span>
+<span>完备的富文本格式支持</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="i-tabler-circle-check !size-4 text-indigo-600"></span>
+<span>支持拖拽和粘贴图片上传</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="i-tabler-circle-check !size-4 text-indigo-600"></span>
+<span>支持通过插件扩展编辑器</span>
+</li>
+</ul>
+<div class="mt-4">
+<a href="user-guide/posts.html" target="_blank" class="group inline-flex items-center text-sm text-indigo-600 duration-500 ease-in-out after:bg-indigo-600 hover:text-indigo-600">
+了解更多
+<span class="i-tabler-chevron-right !size-4 transition-all group-hover:translate-x-1"></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="container mx-auto mt-16 md:mt-24">
+<div class="grid grid-cols-1 pb-8 text-center">
+<h3 class="mb-4 text-2xl font-semibold leading-normal md:text-3xl md:leading-normal">更多特性</h3>
+<p class="text-slate-400">我们将不断探索和追求更好的使用体验，持续迭代出更加优秀的 Halo</p>
+</div>
+<div class="mt-8 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+<div class="group relative overflow-hidden transition-all duration-500 ease-in-out">
+<span class="iconify block size-9" data-icon="tabler:brand-github"></span>
+<div class="mt-6">
+<span class="text-lg font-medium">代码开源</span>
+<p class="mt-3 leading-relaxed text-slate-400">Halo 的项目代码开源在 GitHub 上且处于积极维护状态，截止目前已经发布了 109 个版本。你也可以在上面提交你的问题或者参与代码贡献。</p>
+</div>
+</div>
+<div class="group relative overflow-hidden transition-all duration-500 ease-in-out">
+<span class="iconify block size-9" data-icon="tabler:server-2"></span>
+<div class="mt-6">
+<span class="text-lg font-medium">易于部署</span>
+<p class="mt-3 leading-relaxed text-slate-400">推荐使用 Docker 的方式部署 Halo，便于升级，同时避免了各种环境依赖的问题。统一管理在工作目录中的应用数据也能方便地进行备份和迁移。</p>
+</div>
+</div>
+<div class="group relative overflow-hidden transition-all duration-500 ease-in-out">
+<span class="iconify block size-9" data-icon="tabler:plug"></span>
+<div class="mt-6">
+<span class="text-lg font-medium">插件机制</span>
+<p class="mt-3 leading-relaxed text-slate-400">支持在插件运行时为系统添加新功能，同时保持 Halo 自身的简洁轻量。这种灵活的插件机制让用户根据自身需求自由扩展 Halo 的功能，帮助用户实现富有想象力的站点。</p>
+</div>
+</div>
+<div class="group relative overflow-hidden transition-all duration-500 ease-in-out">
+<span class="iconify block size-9" data-icon="tabler:palette"></span>
+<div class="mt-6">
+<span class="text-lg font-medium">模板机制</span>
+<p class="mt-3 leading-relaxed text-slate-400">支持自定义配置、主题预览、多语言等功能。这种灵活的模板系统让用户可以针对自己的需求进行自定义配置，为网站带来更加个性化的外观和交互体验。</p>
+</div>
+</div>
+<div class="group relative overflow-hidden transition-all duration-500 ease-in-out">
+<span class="iconify block size-9" data-icon="tabler:folder"></span>
+<div class="mt-6">
+<span class="text-lg font-medium">附件管理</span>
+<p class="mt-3 leading-relaxed text-slate-400">支持多种存储策略，并支持通过插件扩展外部存储位置，可以让用户更加灵活地地上传、查看和管理附件。</p>
+</div>
+</div>
+<div class="group relative overflow-hidden transition-all duration-500 ease-in-out">
+<span class="iconify block size-9" data-icon="tabler:search"></span>
+<div class="mt-6">
+<span class="text-lg font-medium">搜索引擎</span>
+<p class="mt-3 leading-relaxed text-slate-400">内置全文搜索引擎，支持关键字搜索文章和页面内容。同时支持通过插件扩展外部搜索引擎，做到让用户按需选择、自由扩展。</p>
+</div>
+</div>
+</div>
+</div>
+<section class="container mx-auto mt-16 md:mt-24">
+<div class="grid grid-cols-1 pb-8 text-center">
+<h3 class="mb-4 text-2xl font-semibold leading-normal md:text-3xl md:leading-normal">精美的主题</h3>
+</div>
+<div class="mt-8">
+<div id="featured-themes"></div>
+<div class="mt-3 flex justify-end">
+<a href="store/apps-THEME.html" class="group inline-flex items-center text-sm text-slate-500 duration-500 ease-in-out hover:text-indigo-600">
+查看更多
+<span class="i-tabler-chevron-right !size-4 transition-all group-hover:translate-x-1"></span>
+</a>
+</div>
+</div>
+<script>document.addEventListener("DOMContentLoaded",() =>{main.renderFeaturedThemes();});</script>
+</section>
+<section class="container mx-auto mt-16 md:mt-24">
+<div class="grid grid-cols-1 pb-8 text-center">
+<h3 class="mb-4 text-2xl font-semibold leading-normal md:text-3xl md:leading-normal">丰富的插件</h3>
+</div>
+<div class="mt-8">
+<div id="featured-plugins"></div>
+<div class="mt-3 flex justify-end">
+<a href="store/apps-PLUGIN.html" class="group inline-flex items-center text-sm text-slate-500 duration-500 ease-in-out hover:text-indigo-600">
+查看更多
+<span class="i-tabler-chevron-right !size-4 transition-all group-hover:translate-x-1"></span>
+</a>
+</div>
+</div>
+<script>document.addEventListener("DOMContentLoaded",() =>{main.renderFeaturedPlugins();});</script>
+</section>
+<section class="container mx-auto my-16 md:my-24">
+<div class="grid grid-cols-1 pb-8 text-center">
+<h3 class="mb-4 text-2xl font-semibold leading-normal md:text-3xl md:leading-normal">立即体验</h3>
+<p class="mx-auto max-w-xl text-slate-400">
+准备好体验 Halo 了吗？你可以查阅我们完整的部署文档，或者在线使用 Demo 进行体验。
+</p>
+</div>
+<div class="text-center">
+<a class="group mb-2 mr-2 inline-flex items-center gap-1.5 rounded-md border border-gray-800 bg-gray-800 px-3 py-2.5 text-sm font-medium text-white hover:bg-gray-900" href="category/安装指南.html" target="_blank">
+<span class="i-tabler-book !size-4"></span>
+<span>部署文档</span>
+<span class="i-tabler-chevron-right transition-all group-hover:translate-x-1"></span>
+</a>
+<a class="group mb-2 mr-2 inline-flex items-center gap-1.5 rounded-md border bg-white px-3 py-2.5 text-sm font-medium text-black hover:bg-gray-200" href="index1.html#%E5%9C%A8%E7%BA%BF%E4%BD%93%E9%AA%8C" target="_blank">
+<span class="i-tabler-cloud !size-4"></span>
+<span>Demo</span>
+<span class="i-tabler-chevron-right transition-all group-hover:translate-x-1"></span>
+</a>
+</div>
+</section>
+<footer class="mt-10 bg-white py-8">
+<div class="container mx-auto md:flex md:justify-between md:gap-10">
+<div class="mb-6 max-w-full md:mb-0 md:max-w-md">
+<a href="index.html" class="mb-6 flex items-center">
+<img loading="lazy" src="logo.png" class="mr-3 h-8" width="32px" height="32px" alt="Halo">
+<span class="self-center whitespace-nowrap text-2xl font-semibold"> Halo </span>
+</a>
+<span class="text-sm font-light text-gray-600"> 强大易用的开源建站工具。 </span>
+</div>
+<div class="grid grid-cols-2 gap-8 sm:grid-cols-4 sm:gap-16">
+<div>
+<h2 class="mb-6 text-sm font-semibold text-gray-900">关于</h2>
+<ul class="text-sm text-gray-500">
+<li class="mb-4">
+<a href="about.html" target="_self" class="transition-all hover:text-gray-900 hover:underline">关于我们</a>
+</li>
+<li class="mb-4">
+<a href="store/apps.html" target="_self" class="transition-all hover:text-gray-900 hover:underline">应用市场</a>
+</li>
+<li class="mb-4">
+<a href="https://github.com/halo-dev" target="_blank" class="transition-all hover:text-gray-900 hover:underline">GitHub 组织</a>
+</li>
+<li class="mb-4">
+<a href="https://gitee.com/halo-dev" target="_blank" class="transition-all hover:text-gray-900 hover:underline">Gitee 组织</a>
+</li>
+<li class="mb-4">
+<a href="status/default.html" target="_blank" class="transition-all hover:text-gray-900 hover:underline">Server Status</a>
+</li>
+</ul>
+</div>
+<div>
+<h2 class="mb-6 text-sm font-semibold text-gray-900">文档</h2>
+<ul class="text-sm text-gray-500">
+<li class="mb-4">
+<a href="category/安装指南.html" target="_blank" class="transition-all hover:text-gray-900 hover:underline">安装指南</a>
+</li>
+<li class="mb-4">
+<a href="category/用户指南.html" target="_blank" class="transition-all hover:text-gray-900 hover:underline">用户指南</a>
+</li>
+<li class="mb-4">
+<a href="category/开发者指南.html" target="_blank" class="transition-all hover:text-gray-900 hover:underline">开发者指南</a>
+</li>
+<li class="mb-4">
+<a href="category/参与贡献.html" target="_blank" class="transition-all hover:text-gray-900 hover:underline">参与贡献</a>
+</li>
+</ul>
+</div>
+<div>
+<h2 class="mb-6 text-sm font-semibold text-gray-900">社区</h2>
+<ul class="text-sm text-gray-500">
+<li class="mb-4">
+<a href="index2.html" target="_blank" class="transition-all hover:text-gray-900 hover:underline">官方论坛</a>
+</li>
+<li class="mb-4">
+<a href="upload/store-resources/autoHalonews.jpg" target="_blank" class="transition-all hover:text-gray-900 hover:underline">官方咨讯群</a>
+</li>
+<li class="mb-4">
+<a href="https://github.com/halo-dev/halo/issues" target="_blank" class="transition-all hover:text-gray-900 hover:underline">GitHub Issues</a>
+</li>
+<li class="mb-4">
+<a href="https://github.com/halo-dev/halo/discussions" target="_blank" class="transition-all hover:text-gray-900 hover:underline">GitHub Discussions</a>
+</li>
+<li class="mb-4">
+<a href="https://t.me/halo_dev" target="_blank" class="transition-all hover:text-gray-900 hover:underline">Telegram Channel</a>
+</li>
+<li class="mb-4">
+<a href="https://t.me/HaloBlog" target="_blank" class="transition-all hover:text-gray-900 hover:underline">Telegram Group</a>
+</li>
+<li class="mb-4">
+<a href="https://join.slack.com/t/halodev/shared_invite/zt-1j5i6vs8w-~oGKFM6R_~cpEO1irk3VVA" target="_blank" class="transition-all hover:text-gray-900 hover:underline">Slack</a>
+</li>
+</ul>
+</div>
+<div>
+<h2 class="mb-6 text-sm font-semibold text-gray-900">友情链接</h2>
+<ul class="text-sm text-gray-500">
+<li class="mb-4">
+<a href="https://www.fit2cloud.com/" target="_blank" class="transition-all hover:text-gray-900 hover:underline">FIT2CLOUD 飞致云</a>
+</li>
+<li class="mb-4">
+<a href="https://metersphere.com/?utm_source=halo" target="_blank" class="transition-all hover:text-gray-900 hover:underline">MeterSphere 专业测试云</a>
+</li>
+<li class="mb-4">
+<a href="https://1panel.cn/" target="_blank" class="transition-all hover:text-gray-900 hover:underline">1Panel - 开源 Linux 面板</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<hr class="my-6 border-gray-200 sm:mx-auto lg:my-8">
+<div class="container mx-auto sm:flex sm:items-center sm:justify-between">
+<div class="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
+<span class="text-sm text-gray-500 sm:text-center">©2023 Halo All Rights Reserved 凌霞（深圳）软件有限公司</span>
+<a href="https://beian.miit.gov.cn/" target="_blank" class="text-sm text-gray-500 sm:text-center">粤ICP备2023013692号</a>
+</div>
+<div class="mt-4 flex flex-wrap justify-center gap-6 sm:mt-0 sm:justify-end">
+<a href="https://github.com/halo-dev" title="GitHub" class="" style="color:#181717">
+<i class="iconify size-4" data-icon="simple-icons:github"></i>
+</a><a href="https://gitee.com/halo-dev" title="Gitee" class="" style="color:#C71D23">
+<i class="iconify size-4" data-icon="simple-icons:gitee"></i>
+</a><a href="https://t.me/halo_dev" title="Telegram" class="" style="color:#26A5E4">
+<i class="iconify size-4" data-icon="simple-icons:telegram"></i>
+</a><a href="https://join.slack.com/t/halodev/shared_invite/zt-1j5i6vs8w-~oGKFM6R_~cpEO1irk3VVA" title="Slack" class="" style="color:#4A154B">
+<i class="iconify size-4" data-icon="simple-icons:slack"></i>
+</a><a href="upload/store-resources/Wechatofficial.jpg" title="Wechat" class="" style="color:#9ec762">
+<i class="iconify size-4" data-icon="simple-icons:wechat"></i>
+</a><a href="https://space.bilibili.com/3493261769443630" title="Bilibili" class="" style="color:#00A1D6">
+<i class="iconify size-4" data-icon="simple-icons:bilibili"></i>
+</a>
+</div>
+</div>
+<div class="container mx-auto text-center sm:flex sm:items-center sm:justify-between">
+<span class="text-sm text-gray-500 sm:text-center">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VXXCS173XZ"></script>
+<script>window.dataLayer =window.dataLayer ||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-VXXCS173XZ');</script>
+<script>var _hmt =_hmt ||[];(function() {var hm =document.createElement("script");hm.src ="https://hm.baidu.com/hm.js?a6cd05879da2fa97c7b3e27d0b7f88bc";var s =document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","i9bm07950p");</script>
+<script>var _hmt =_hmt ||[];(function() {var hm =document.createElement("script");hm.src ="https://hm.baidu.com/hm.js?0180bb20bb6253b87f55220a3c6aee9d";var s =document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<p style="
+    text-align: left;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+">本站由 <a href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral" target="_blank"><img width="50" src="upload/又拍云_logo5.png" alt="又拍云_logo5.png"></a> 提供 CDN 加速/云存储服务
+</p>
+</span>
+</div>
+</footer>
+</body>
+</html>

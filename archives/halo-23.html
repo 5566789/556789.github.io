@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>支持个人中心，Halo 2.11.0 发布 - Halo - 强大易用的开源建站工具</title>
+<link rel="canonical" href="">
+<link rel="stylesheet" href="../themes/halo-theme-official-v3/assets/dist/style.css">
+<script src="../themes/halo-theme-official-v3/assets/dist/main.iife.js"></script>
+<meta property="og:site_name" content=" Halo - 强大易用的开源建站工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="支持个人中心，Halo 2.11.0 发布">
+<meta property="og:url" content="https://www.halo.run/archives/halo-2.11-released">
+<meta property="og:description" content="在这个版本中，Halo 主要支持了个人中心功能，以及其他 50 多项功能优化和问题修复。">
+<meta property="og:image" content="/upload/halo%20cover%20(Copy)-yiqf.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="支持个人中心，Halo 2.11.0 发布">
+<meta name="twitter:url" content="https://www.halo.run/archives/halo-2.11-released">
+<meta name="twitter:description" content="在这个版本中，Halo 主要支持了个人中心功能，以及其他 50 多项功能优化和问题修复。">
+<meta name="twitter:image" content="/upload/halo%20cover%20(Copy)-yiqf.png">
+<meta name="keywords" content="建站,网站,主题,博客主题,博客模板,网站主题,网站模板,免费建站,开源建站,开源">
+<link rel="dns-prefetch" href="https://www.clarity.ms/">
+<link rel="dns-prefetch" href="https://hm.baidu.com/">
+<link rel="dns-prefetch" href="https://res.wx.qq.com/">
+<link rel="dns-prefetch" href="https://analytics.halo.run/">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+<link rel="dns-prefetch" href="https://h.clarity.ms/">
+<style>#app-releases table{width:100%}</style>
+<meta content="Halo 2.14.0" name="generator"><meta name="description" content="在这个版本中，Halo 主要支持了个人中心功能，以及其他 50 多项功能优化和问题修复。"><script src="../open/js/jweixin-1.6.0.js"></script>
+<script>wx.config({debug:false,appId:"wxa2721174a1796a20",timestamp:1714234536,nonceStr:"6rZ36OUjhmyjfZR6",signature:"303d9a63764fbd30f049d4b98bdc3f24b1215e09",jsApiList:["updateAppMessageShareData","updateTimelineShareData"]
+});wx.ready(function () {wx.updateAppMessageShareData({title:'支持个人中心，Halo 2.11.0 发布',desc:'在这个版本中，Halo 主要支持了个人中心功能，以及其他 50 多项功能优化和问题修复。',link:'https://www.halo.run/archives/halo-2.11-released',imgUrl:'https://www.halo.run/upload/halo%20cover%20(Copy)-yiqf.png',success:function () {console.log('wechat share config success');}
+})
+wx.updateTimelineShareData({title:'支持个人中心，Halo 2.11.0 发布',link:'https://www.halo.run/archives/halo-2.11-released',imgUrl:'https://www.halo.run/upload/halo%20cover%20(Copy)-yiqf.png',success:function () {console.log('wechat share config success');}
+})
+});wx.error(function(res){console.error("Wechat JS-SDK config error: ",res);});</script>
+<meta content="7bd5853288b2e96ba876f1cd81bdcde9" name="360-site-verification"><meta content="codeva-c28w2gYZA1" name="baidu-site-verification"><meta content="" name="sogou_site_verification"><meta content="gRZYnaYWUQXWLvov-54i4W4-SdWlhwJt46uHU2q0eIs" name="google-site-verification"><meta content="B0DF5784F7E47C5E4B8BAD7790FEF319" name="msvalidate.01"><meta content="XEEMf+fWLHfkNmmxWmWh" name="bytedance-verification-code"><script async="" defer="" data-website-id="9480712b-6060-4a01-8c67-38dfe6264d07" src="../script.js"></script>
+<link href="../plugins/PluginLightGallery/assets/static/css/lightgallery.min.css" rel="stylesheet">
+<script defer="" src="../plugins/PluginLightGallery/assets/static/js/lightgallery.min.js"></script>
+<script defer="" src="../plugins/PluginLightGallery/assets/static/js/plugins/zoom/lg-zoom.min.js"></script>
+<script type="text/javascript">document.addEventListener("DOMContentLoaded",function () {document.querySelectorAll(`#content img`)?.forEach(function (node) {if (node) {node.dataset.src =node.src;}
+const galleries =document.querySelectorAll(`#content`);if (galleries.length >0) {galleries.forEach(function (node) {lightGallery(node,{selector:"img",});});}
+});});</script>
+<script src="../plugins/restricted-reading/assets/static/restricted-shadow.iife.js"></script><link rel="stylesheet" href="../plugins/restricted-reading/assets/static/var.css">
+<script src="../plugins/PluginCommentWidget/assets/static/comment-widget.iife-2.1.0.js"></script>
+<link rel="stylesheet" href="../plugins/PluginCommentWidget/assets/static/style.css">
+<script class="pjax">
+    var autoContactFrom = []
+</script>
+<script src="../plugins/PluginContactForm/assets/static/contact-form.iife-1.0.2.js"></script>
+<link rel="stylesheet" href="../plugins/PluginContactForm/assets/static/style.css">
+<link href="../plugins/PluginHighlightJS/assets/static/styles/github-dark.min.css" rel="stylesheet">
+<script defer="" src="../plugins/PluginHighlightJS/assets/static/highlight.min.js"></script>
+<link href="../plugins/PluginHighlightJS/assets/static/plugins/highlightjs-copy.min.css" rel="stylesheet">
+<script defer="" src="../plugins/PluginHighlightJS/assets/static/plugins/highlightjs-copy.min.js"></script>
+<link href="../plugins/PluginHighlightJS/assets/static/plugins/override.css" rel="stylesheet">
+<script>document.addEventListener("DOMContentLoaded",async function () {hljs.addPlugin(new CopyButtonPlugin({lang:"zh"}));const extraLanguages ="".split(",").filter((x) =>x);for (let i =0;i < extraLanguages.length;i++) {const lang =extraLanguages[i];if (lang) {await loadScript(`/plugins/PluginHighlightJS/assets/static/languages/${lang}.min.js`);}
+}
+document.querySelectorAll("pre code").forEach((el) =>{hljs.highlightElement(el);});});function loadScript(url) {return new Promise(function (resolve,reject) {const script =document.createElement("script");script.type ="text/javascript";script.src =url;script.onload =resolve;script.onerror =reject;document.head.appendChild(script);});}
+</script>
+<script src="../plugins/PluginSearchWidget/assets/static/search-widget.iife.js" async=""></script>
+<link rel="stylesheet" href="../plugins/PluginSearchWidget/assets/static/style.css">
+<script async="" defer="" src="../halo-tracker.js" data-group="content.halo.run" data-plural="posts" data-name="d8af2d3d-8b45-4e9c-b6e4-642b135f5e2b"></script>
+<link rel="icon" href="https://www.halo.run/themes/theme-official-v2/assets/favicons/favicon-96x96.png">
+</head>
+<body class="light bg-slate-50/50">
+<header id="header-menu" class="sticky top-0 z-10 flex h-14 bg-white py-3 shadow-sm transition-all" x-data="{ open : false }">
+<div class="container mx-auto flex h-full justify-between">
+<div class="flex h-full items-center gap-6">
+<div class="mr-2 h-full">
+<a href="../index.html" class="inline-flex h-full items-center">
+<img src="../upload/2022/03/logo.svg" alt="Logo" class="h-6 w-auto" width="59" height="24">
+</a>
+</div>
+<ul id="menu-items" x-data="menu" class="hidden items-center gap-3 lg:flex">
+<li x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+<a class="rounded px-2 py-1.5 text-sm tracking-wider text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900" href="../index.html" target="_self">首页</a>
+</li>
+<li x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+<a class="rounded px-2 py-1.5 text-sm tracking-wider text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900" href="../index1.html" target="_blank">文档</a>
+</li>
+<li x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+<a class="rounded px-2 py-1.5 text-sm tracking-wider text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900" href="../store/apps.html" target="_self">应用市场</a>
+</li>
+<li x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+<a class="rounded px-2 py-1.5 text-sm tracking-wider text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900" href="../archives.html" target="_self">博客</a>
+</li>
+<li x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+<a class="rounded px-2 py-1.5 text-sm tracking-wider text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900" href="../index2.html" target="_blank">论坛</a>
+</li>
+<li x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+<a class="rounded px-2 py-1.5 text-sm tracking-wider text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900" href="../index1.html#%E5%9C%A8%E7%BA%BF%E4%BD%93%E9%AA%8C" target="_blank">在线体验</a>
+</li>
+<li x-data="dropdown" @mouseenter="open()" @mouseleave="close()">
+<a class="rounded px-2 py-1.5 text-sm tracking-wider text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900" href="https://www.lxware.cn/halo" target="_blank">专业版</a>
+</li>
+</ul>
+</div>
+<div class="flex items-center">
+<ul class="flex items-center gap-3">
+<li class="flex size-8 items-center justify-center rounded-full text-gray-600 transition-all hover:bg-gray-100 hover:text-blue-600 lg:hidden" x-on:click="open = true">
+<span class="i-tabler-menu-2 block !size-5"></span>
+</li>
+<li>
+<a href="javascript:SearchWidget.open()" title="搜索" class="flex size-8 items-center justify-center rounded-full text-gray-600 transition-all hover:bg-gray-100 hover:text-blue-600">
+<span class="i-tabler-search block !size-5"></span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div>
+<div class="fixed inset-0 z-50 bg-gray-800/40 opacity-100 backdrop-blur-sm" aria-hidden="true" x-show="open" x-transition:enter="ease-in-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in-out duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"></div>
+<div class="fixed inset-x-4 top-8 z-50 origin-top scale-100 rounded-lg bg-white p-4" tabindex="-1" x-show="open" x-transition:enter="ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-100" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" @click.outside="open = false">
+<div class="flex flex-row-reverse items-center justify-between">
+<button class="p-1 text-xl text-gray-600" type="button" tabindex="0" @click="open = false">
+<span class="i-tabler-x block"></span>
+</button>
+<h2 class="text-sm font-medium text-gray-600">菜单</h2>
+</div>
+<nav class="mt-6">
+<ul class="-my-2 divide-y divide-gray-100 text-sm text-gray-800">
+<li>
+<a class="flex items-center justify-between gap-1 py-2" href="../index.html" target="_self">
+<span>首页</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between gap-1 py-2" href="../index1.html" target="_blank">
+<span>文档</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between gap-1 py-2" href="../store/apps.html" target="_self">
+<span>应用市场</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between gap-1 py-2" href="../archives.html" target="_self">
+<span>博客</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between gap-1 py-2" href="../index2.html" target="_blank">
+<span>论坛</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between gap-1 py-2" href="../index1.html#%E5%9C%A8%E7%BA%BF%E4%BD%93%E9%AA%8C" target="_blank">
+<span>在线体验</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between gap-1 py-2" href="https://www.lxware.cn/halo" target="_blank">
+<span>专业版</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<div class="relative">
+<div class="before:z-1 relative h-96 bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-black/40" style="background-image: url(https://www.halo.run/archives/'/upload/halo%20cover%20(Copy)-yiqf.png&#39;)"></div>
+<header class="pattern-header-text pattern-header-text absolute top-1/2 mx-auto flex w-full flex-col items-center justify-center gap-3">
+<h1 class="text-5xl text-white">支持个人中心，Halo 2.11.0 发布</h1>
+</header>
+</div>
+<section class="container mx-auto mt-6 grid grid-cols-4 gap-6 !-mt-20">
+<div x-data="upvote('post','content.halo.run','posts')" class="z-0 col-span-4 rounded-xl bg-white p-4 shadow-sm sm:col-span-3">
+<div class="flex flex-col items-center justify-between gap-2 sm:flex-row" x-data="{name:&#39;d8af2d3d-8b45-4e9c-b6e4-642b135f5e2b&#39;}">
+<div class="flex w-full items-center justify-start gap-2">
+<img src="../upload/2f0cd388-0298-4f4d-96e9-1264fe912f5e.png" class="size-10 rounded-full" alt="Ryan Wang">
+<div class="flex flex-col gap-0.5">
+<span title="Ryan Wang" class="text-sm font-semibold text-gray-900">Ryan Wang</span>
+<div class="flex items-center gap-2 text-xs font-light text-gray-600">
+<span>发布于 2023-12-04</span>
+<span class="text-gray-300">/</span>
+<span>4202 阅读</span>
+</div>
+</div>
+</div>
+<div class="flex flex-row items-center gap-1.5 self-end">
+<div @click="handleUpvote(name)" class="group inline-flex cursor-pointer items-center rounded-lg">
+<div class="inline-flex items-center justify-center rounded-full p-2 transition-all group-hover:bg-gray-100">
+<div class="0 i-tabler-heart text-lg text-gray-600 group-hover:text-red-600" x-show="!upvoted(name)"></div>
+<div class="i-tabler-heart-filled text-lg text-red-600" x-show="upvoted(name)"></div>
+</div>
+<span class="0 text-sm text-gray-600 group-hover:text-red-600" data-upvote-post-name="d8af2d3d-8b45-4e9c-b6e4-642b135f5e2b">7</span>
+</div>
+<a href="#comment" class="group inline-flex cursor-pointer items-center gap-0.5 rounded-lg">
+<div class="inline-flex items-center justify-center rounded-full p-2 transition-all group-hover:bg-gray-100">
+<div class="i-tabler-message-circle text-lg text-gray-600 group-hover:text-indigo-500"></div>
+</div>
+<span class="text-sm text-gray-600 group-hover:text-indigo-500">5</span>
+</a>
+</div>
+</div>
+<h1 class="my-3 text-2xl font-medium">支持个人中心，Halo 2.11.0 发布</h1>
+<div class="flex gap-2">
+</div>
+<article id="content" class="prose prose-base mt-4 !max-w-none prose-pre:p-0"><html>
+<head></head>
+<body>
+<blockquote>
+<h2 style="">⚠️ 注意</h2>
+<p style="">此版本由于升级了 SpringBoot 的版本并依赖了新的 H2 Database 版本，经过我们测试无法正常从旧版本 Halo 升级。所以如果你当前正在使用 H2 作为数据库，可能需要使用系统的<a target="_blank" rel="noopener noreferrer nofollow" href="https://docs.halo.run/user-guide/backup">备份恢复</a>功能进行重新安装。</p>
+<p style="">此外，不建议在生产环境使用 H2 作为数据库。</p>
+</blockquote>
+<p style=""></p>
+<p style="">Halo 是一款强大易用的开源建站工具，它让你无需太多的技术知识就可以快速搭建一个博客、网站或者内容管理系统。具备可插拔架构、主题套用、富文本编辑器等多重特性，支持用户根据自己的喜好选择不同类型的插件及主题模板来定制化自己的站点功能及外观。让内容创作和发布更加便捷生动。</p>
+<p style="text-align: start; ">截至目前（2023 年 Q3 季度），Halo 已经在 Docker Hub 获得了超过 170 万次下载，GitHub Star 数突破 28 k，并拥有一百多名社区贡献者。</p>
+<p style="text-align: start; ">2023 年 12 月 01 日，强大易用的开源建站工具 Halo 正式发布 2.11.0 版本。</p>
+<p style="text-align: start; ">在这个版本中，Halo 主要支持了个人中心功能，以及其他 50 多项功能优化和问题修复。</p>
+<h2 style="text-align: start; " id="heading-1">亮点更新</h2>
+<h3 style="" id="heading-2">个人中心</h3>
+<p style="">此版本全新加入了个人中心功能，并将所有和用户自身有关的功能移动到了个人中心，包括基本信息设置、消息通知等。此外，个人中心还支持管理自己的文章，管理员也可以根据自身的需求选择用户是否可以管理自己的文章。</p>
+<p style="">有了个人中心之后，后续还可以通过插件为网站用户扩展出更多的功能，用于满足各式各样的网站需求。</p>
+<p style="">个人中心页面：</p>
+<p style=""><img src="../upload/2.11-uc-profile.png" alt="2.11-uc-profile.png" style="display: inline-block"></p>
+<p style="">我的文章页面：</p>
+<p style=""><img src="../upload/2.11-uc-posts.png" alt="2.11-uc-posts.png" style="display: inline-block"></p>
+<h3 style="" id="heading-3">优化内存占用</h3>
+<p style="">在这个版本我们使用 OpenJ9 作为基础镜像，可以显著的优化内存占用，经过测试，大约可以减少 20% - 30% 的内存消耗，以下是我们演示网站的内存占用对比。</p>
+<table>
+<tbody>
+<tr>
+<th colspan="1" rowspan="1" colwidth="478"><h3 style="" id="heading-4"><span fontsize="" color="rgb(234, 88, 12)" style="color: rgb(234, 88, 12)">2.10</span></h3></th>
+<th colspan="1" rowspan="1" colwidth="670"><h3 style="" id="heading-5"><span fontsize="" color="rgb(59, 130, 246)" style="color: rgb(59, 130, 246)">2.11</span></h3></th>
+</tr>
+<tr>
+<td colspan="1" rowspan="1" colwidth="478"><p style=""><img src="../upload/compare-memory-2.10.png" alt="compare-memory-2.10.png" width="100%" height="100%" style="display: inline-block"></p></td>
+<td colspan="1" rowspan="1" colwidth="670"><p style=""><img src="../upload/compare-memory-2.11.png" alt="compare-memory-2.11.png" width="100%" height="100%" style="display: inline-block"></p></td>
+</tr>
+</tbody>
+</table>
+<h3 style="" id="heading-6">邮箱验证和密码重置</h3>
+<p style="">从 Halo 2.10 开始，我们支持了可配置的消息通知功能。在这个版本中，我们基于此完善了用户的邮箱验证和密码重置功能。</p>
+<p style="">邮箱验证：</p>
+<p style=""><img src="../upload/2.11-verify-email.png" alt="2.11-verify-email.png" style="display: inline-block"></p>
+<p style="">密码重置：</p>
+<p style=""><img src="../upload/2.11-send-reset-password-link.png" alt="2.11-send-reset-password-link.png" style="display: inline-block"></p>
+<p style=""><img src="../upload/2.11-reset-password.png" alt="2.11-reset-password.png" style="display: inline-block"></p>
+<h2 style="" id="heading-7">完整更新日志</h2>
+<h3 style="" id="heading-8">新特性</h3>
+<ul>
+<li><p style="">文章预览支持模拟不同设备尺寸。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/Thematrixofink">@Thematrixofink</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4846">#4846</a></p></li>
+<li><p style="">支持个人中心。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4857">#4857</a></p></li>
+<li><p style="">支持在个人中心管理用户自己的文章。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/JohnNiang">@JohnNiang</a>&nbsp;&amp;&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4866">#4866</a></p></li>
+<li><p style="">新增用户邮箱验证机制。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/guqing">@guqing</a>&nbsp;&amp;&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4878">#4878</a></p></li>
+<li><p style="">支持为自定义的角色配置登录之后默认跳转位置。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4918">#4918</a></p></li>
+<li><p style="">新增用户站内消息删除功能。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/guqing">@guqing</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4906">#4906</a></p></li>
+<li><p style="">用户注册新增电子邮箱字段。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4899">#4899</a></p></li>
+<li><p style="">支持在概览页面显示已启动插件和已激活的主题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4897">#4897</a></p></li>
+<li><p style="">使用 ibm-semeru-runtimes:open-17-jre 作为基础镜像构建 Halo 镜像，以获得更优的内存消耗。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;&amp;&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/JohnNiang">@JohnNiang</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4896">#4896</a></p></li>
+<li><p style="">新增使用邮箱地址找回密码功能。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/guqing">@guqing</a>&nbsp;&amp;&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4941">#4941</a></p></li>
+<li><p style="">支持为自定义角色配置&nbsp;<strong>禁止访问 Console</strong>&nbsp;的选项。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4958">#4958</a></p></li>
+</ul>
+<h3 style="" id="heading-9">功能优化</h3>
+<ul>
+<li><p style="">优化 Console 的登录会话保活机制。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4949">#4949</a></p></li>
+<li><p style="">完善系统概览页面的 UI 权限控制。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4945">#4945</a></p></li>
+<li><p style="">提供允许同步更改插件运行状态的 API。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/guqing">@guqing</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4745">#4745</a></p></li>
+<li><p style="">支持隐藏/显示默认编辑器的侧边栏。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4942">#4942</a></p></li>
+<li><p style="">优化 Console 端插件捆绑资源的请求，防止在操作插件状态之后无法及时更新资源。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4804">#4804</a></p></li>
+<li><p style="">修改发布文章的等待时间以防止因数据库执行延迟较高导致的错误提示。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/guqing">@guqing</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4810">#4810</a></p></li>
+<li><p style="">添加 Generator 元数据标识。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/JohnNiang">@JohnNiang</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4821">#4821</a></p></li>
+<li><p style="">异步加载文件上传组件，优化 Console 加载速度。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4875">#4875</a></p></li>
+<li><p style="">优化 Console 端表单元素样式。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4893">#4893</a></p></li>
+<li><p style="">为默认编辑器中 heading 类型元素生成有意义的 id。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4909">#4909</a></p></li>
+<li><p style="">优化初始化预设插件的流程。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4901">#4901</a></p></li>
+</ul>
+<h3 style="" id="heading-10">问题修复</h3>
+<ul>
+<li><p style="">修复筛选未发布文章时结果不正确的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/guqing">@guqing</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4736">#4736</a></p></li>
+<li><p style="">修复 Console 端评论状态筛选无法显示筛选结果的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/zjy4fun">@zjy4fun</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4743">#4743</a></p></li>
+<li><p style="">修复部分场景下插件详情的扩展 tab 不能正常显示的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/longjuan">@longjuan</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4746">#4746</a></p></li>
+<li><p style="">解决文章设置中可能出现空白元数据的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/LIlGG">@LIlGG</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4772">#4772</a></p></li>
+<li><p style="">修复无法正常调用评论列表 Finder API 的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/Roozenlz">@Roozenlz</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4773">#4773</a></p></li>
+<li><p style="">修复文章可能因为没有发布时间导致发布失败的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/guqing">@guqing</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4775">#4775</a></p></li>
+<li><p style="">解决无用户管理权限的用户无法上传头像的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/LIlGG">@LIlGG</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4777">#4777</a></p></li>
+<li><p style="">修复因部分角色导致无法正常创建个人令牌的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/JohnNiang">@JohnNiang</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4800">#4800</a></p></li>
+<li><p style="">优化编辑器性能并解决切换页面所造成的卡死现象。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/LIlGG">@LIlGG</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4805">#4805</a></p></li>
+<li><p style="">解决删除元数据后仍旧提示 key 不能重复的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/LIlGG">@LIlGG</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4815">#4815</a></p></li>
+<li><p style="">修复在部分 Windows 开发者无法正常构建 Halo 的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/JohnNiang">@JohnNiang</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4844">#4844</a></p></li>
+<li><p style="">修复手动刷新搜索索引会将私有文章加入索引的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/AirboZH">@AirboZH</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4882">#4882</a></p></li>
+<li><p style="">修复因错误构建插件的路由可能导致 OOM 的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/guqing">@guqing</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4890">#4890</a></p></li>
+<li><p style="">修复在 Card 组件中使用下拉组件无法完整显示的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4922">#4922</a></p></li>
+</ul>
+<h3 style="" id="heading-11">依赖更新</h3>
+<ul>
+<li><p style="">升级默认编辑器版本。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4924">#4924</a></p>
+<ul>
+<li><p style="">解决行内块元素宽度设置不准确的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/LIlGG">@LIlGG</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-sigs/richtext-editor/pull/71">halo-sigs/richtext-editor#71</a></p></li>
+</ul></li>
+<li><p style="">升级依赖 Spring Boot 至 3.1.5。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/JohnNiang">@JohnNiang</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4758">#4758</a></p></li>
+<li><p style="">升级 Gradle 至 8.4。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/JohnNiang">@JohnNiang</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4848">#4848</a></p></li>
+<li><p style="">升级 Lombok Gradle 插件至 8.4。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/JohnNiang">@JohnNiang</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4849">#4849</a></p></li>
+<li><p style="">[Action Required] 升级 Spring Boot 至 3.2.0-RC2。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/JohnNiang">@JohnNiang</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4850">#4850</a></p></li>
+<li><p style="">升级 SpringDoc 至 2.2.1-SNAPSHOT 以解决部分 API 文档无法正常使用的问题。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/JohnNiang">@JohnNiang</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4854">#4854</a></p></li>
+<li><p style="">升级 FormKit 的版本至 1.3.0。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4913">#4913</a></p></li>
+<li><p style="">升级 Spring Boot 依赖至 3.2.0。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/JohnNiang">@JohnNiang</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4904">#4904</a></p></li>
+</ul>
+<h3 style="" id="heading-12">开发者相关</h3>
+<ul>
+<li><p style="">插件支持在 templates 目录提供默认模板。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/guqing">@guqing</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4862">#4862</a></p></li>
+<li><p style="">重构 Repeater 组件，使其支持条件判断。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/LIlGG">@LIlGG</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4702">#4702</a></p></li>
+<li><p style="">contributorFinder 支持返回用户元数据、注册信息、用户权限等。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/AirboZH">@AirboZH</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4705">#4705</a></p></li>
+<li><p style="">暴露 Actuator 指标端点以便监控服务状态。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/guqing">@guqing</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4898">#4898</a></p></li>
+<li><p style="">添加&nbsp;<code>@halo-dev/ui-plugin-bundler-kit</code>&nbsp;包，用于向插件提供统一的构建配置。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4916">#4916</a></p></li>
+<li><p style="">添加&nbsp;<code>&lt;StickyBlock /&gt;</code>&nbsp;组件，用于将元素固定在顶部或者底部，并为主题 / 插件 / 系统设置的底部保存按钮区域做了适配。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4919">#4919</a></p></li>
+<li><p style="">将&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/halo-sigs/richtext-editor">halo-sigs/richtext-editor</a>&nbsp;移动到此仓库进行管理。 by&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="user-mention notranslate" href="https://github.com/ruibaby">@ruibaby</a>&nbsp;in&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="issue-link js-issue-link" href="https://github.com/halo-dev/halo/pull/4934">#4934</a></p></li>
+</ul>
+<p style=""></p>
+</body>
+</html></article>
+<div class="mt-10 flex flex-col sm:flex-row sm:justify-between">
+<div class="flex justify-start">
+<a role="navigation" class="group inline-flex items-center gap-2 truncate text-sm text-gray-600 hover:text-gray-900" href="AI-plugin.html" title="解锁创作新境界——Halo AI 助手插件震撼上线！">
+<i class="i-tabler-arrow-left translate-x-1 text-lg transition-all group-hover:translate-x-0"></i>
+<span>解锁创作新境界——Halo AI ...</span>
+</a>
+</div>
+<div class="flex justify-end">
+<a role="navigation" class="group inline-flex items-center gap-2 truncate text-sm text-gray-600 hover:text-gray-900" href="1700113019623.html" title="应用市场使用指南 | 一键安装与升级，主题插件轻松管理">
+<span>应用市场使用指南 | 一键安装与升...</span>
+<i class="i-tabler-arrow-right -translate-x-1 text-lg transition-all group-hover:translate-x-0"></i>
+</a>
+</div>
+</div>
+<hr class="my-10">
+<div>
+<h2 id="comment" class="mb-2 text-base font-medium text-gray-900">评论</h2>
+<div id="comment-content-halo-run-Post-d8af2d3d-8b45-4e9c-b6e4-642b135f5e2b"></div>
+<script>CommentWidget.init("#comment-content-halo-run-Post-d8af2d3d-8b45-4e9c-b6e4-642b135f5e2b",{group:"content.halo.run",kind:"Post",name:"d8af2d3d-8b45-4e9c-b6e4-642b135f5e2b",size:20,replySize:5,withReplies:true,withReplySize:5
+}
+);</script>
+</div>
+</div>
+<aside class="z-0 col-span-1 hidden h-full flex-col gap-6 sm:flex">
+<div class="toc-container sticky top-20 z-[5] w-full cursor-pointer rounded-xl bg-white p-3 shadow transition-all duration-500 hover:shadow-md">
+<h2 class="inline-flex items-center gap-2 text-base">
+<i class="i-tabler-list !size-5"></i>
+目录
+</h2>
+<div class="toc mt-2 max-h-64 overflow-auto"></div>
+</div>
+<div class="w-full cursor-pointer overflow-hidden rounded-xl bg-white p-3 shadow transition-all duration-500 hover:shadow-md">
+<h2 class="inline-flex items-center gap-2 text-base">
+<i class="i-tabler-category !size-5"></i>
+分类目录
+</h2>
+<div class="mt-2">
+<ul class="space-y-1">
+<li>
+<a href="../categories/release-notes.html" title="版本发布" class="group flex items-center justify-between rounded px-1.5 py-1 transition-all hover:bg-gray-100">
+<span class="text-sm opacity-80">版本发布</span>
+<span class="rounded bg-gray-100 px-1 py-0.5 text-xs tabular-nums opacity-70 group-hover:bg-white">38</span>
+</a>
+</li><li>
+<a href="../categories/ying-yong-shi-chang.html" title="应用市场" class="group flex items-center justify-between rounded px-1.5 py-1 transition-all hover:bg-gray-100">
+<span class="text-sm opacity-80">应用市场</span>
+<span class="rounded bg-gray-100 px-1 py-0.5 text-xs tabular-nums opacity-70 group-hover:bg-white">1</span>
+</a>
+</li><li>
+<a href="../categories/blog.html" title="博客" class="group flex items-center justify-between rounded px-1.5 py-1 transition-all hover:bg-gray-100">
+<span class="text-sm opacity-80">博客</span>
+<span class="rounded bg-gray-100 px-1 py-0.5 text-xs tabular-nums opacity-70 group-hover:bg-white">8</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="w-full cursor-pointer overflow-hidden rounded-xl bg-white p-3 shadow transition-all duration-500 hover:shadow-md">
+<div class="flex items-center">
+<h2 class="inline-flex items-center gap-2 text-base">
+<i class="i-tabler-tags !size-5"></i>
+标签
+</h2>
+</div>
+<div class="mt-2 flex flex-wrap gap-2">
+<a href="../tags/themes.html" title="主题" class="rounded bg-gray-100 px-1 py-0.5 text-sm text-gray-900 hover:bg-gray-200">
+#主题
+<sup>0</sup>
+</a><a href="../tags/webp.html" title="webp" class="rounded bg-gray-100 px-1 py-0.5 text-sm text-gray-900 hover:bg-gray-200">
+#webp
+<sup>1</sup>
+</a><a href="../tags/templates.html" title="模板" class="rounded bg-gray-100 px-1 py-0.5 text-sm text-gray-900 hover:bg-gray-200">
+#模板
+<sup>0</sup>
+</a><a href="../tags/halo-themes.html" title="Halo 主题" class="rounded bg-gray-100 px-1 py-0.5 text-sm text-gray-900 hover:bg-gray-200">
+#Halo 主题
+<sup>1</sup>
+</a><a href="../tags/halo-templates.html" title="Halo 模板" class="rounded bg-gray-100 px-1 py-0.5 text-sm text-gray-900 hover:bg-gray-200">
+#Halo 模板
+<sup>0</sup>
+</a><a href="../tags/cloudflare.html" title="Cloudflare" class="rounded bg-gray-100 px-1 py-0.5 text-sm text-gray-900 hover:bg-gray-200">
+#Cloudflare
+<sup>1</sup>
+</a>
+</div>
+</div>
+</aside>
+</section>
+<script>document.addEventListener("DOMContentLoaded",() =>{main.generateToc();});</script>
+<footer class="mt-10 bg-white py-8">
+<div class="container mx-auto md:flex md:justify-between md:gap-10">
+<div class="mb-6 max-w-full md:mb-0 md:max-w-md">
+<a href="../index.html" class="mb-6 flex items-center">
+<img loading="lazy" src="../logo.png" class="mr-3 h-8" width="32px" height="32px" alt="Halo">
+<span class="self-center whitespace-nowrap text-2xl font-semibold"> Halo </span>
+</a>
+<span class="text-sm font-light text-gray-600"> 强大易用的开源建站工具。 </span>
+</div>
+<div class="grid grid-cols-2 gap-8 sm:grid-cols-4 sm:gap-16">
+<div>
+<h2 class="mb-6 text-sm font-semibold text-gray-900">关于</h2>
+<ul class="text-sm text-gray-500">
+<li class="mb-4">
+<a href="../about.html" target="_self" class="transition-all hover:text-gray-900 hover:underline">关于我们</a>
+</li>
+<li class="mb-4">
+<a href="../store/apps.html" target="_self" class="transition-all hover:text-gray-900 hover:underline">应用市场</a>
+</li>
+<li class="mb-4">
+<a href="https://github.com/halo-dev" target="_blank" class="transition-all hover:text-gray-900 hover:underline">GitHub 组织</a>
+</li>
+<li class="mb-4">
+<a href="https://gitee.com/halo-dev" target="_blank" class="transition-all hover:text-gray-900 hover:underline">Gitee 组织</a>
+</li>
+<li class="mb-4">
+<a href="../status/default.html" target="_blank" class="transition-all hover:text-gray-900 hover:underline">Server Status</a>
+</li>
+</ul>
+</div>
+<div>
+<h2 class="mb-6 text-sm font-semibold text-gray-900">文档</h2>
+<ul class="text-sm text-gray-500">
+<li class="mb-4">
+<a href="../category/安装指南.html" target="_blank" class="transition-all hover:text-gray-900 hover:underline">安装指南</a>
+</li>
+<li class="mb-4">
+<a href="../category/用户指南.html" target="_blank" class="transition-all hover:text-gray-900 hover:underline">用户指南</a>
+</li>
+<li class="mb-4">
+<a href="../category/开发者指南.html" target="_blank" class="transition-all hover:text-gray-900 hover:underline">开发者指南</a>
+</li>
+<li class="mb-4">
+<a href="../category/参与贡献.html" target="_blank" class="transition-all hover:text-gray-900 hover:underline">参与贡献</a>
+</li>
+</ul>
+</div>
+<div>
+<h2 class="mb-6 text-sm font-semibold text-gray-900">社区</h2>
+<ul class="text-sm text-gray-500">
+<li class="mb-4">
+<a href="../index2.html" target="_blank" class="transition-all hover:text-gray-900 hover:underline">官方论坛</a>
+</li>
+<li class="mb-4">
+<a href="../upload/store-resources/autoHalonews.jpg" target="_blank" class="transition-all hover:text-gray-900 hover:underline">官方咨讯群</a>
+</li>
+<li class="mb-4">
+<a href="https://github.com/halo-dev/halo/issues" target="_blank" class="transition-all hover:text-gray-900 hover:underline">GitHub Issues</a>
+</li>
+<li class="mb-4">
+<a href="https://github.com/halo-dev/halo/discussions" target="_blank" class="transition-all hover:text-gray-900 hover:underline">GitHub Discussions</a>
+</li>
+<li class="mb-4">
+<a href="https://t.me/halo_dev" target="_blank" class="transition-all hover:text-gray-900 hover:underline">Telegram Channel</a>
+</li>
+<li class="mb-4">
+<a href="https://t.me/HaloBlog" target="_blank" class="transition-all hover:text-gray-900 hover:underline">Telegram Group</a>
+</li>
+<li class="mb-4">
+<a href="https://join.slack.com/t/halodev/shared_invite/zt-1j5i6vs8w-~oGKFM6R_~cpEO1irk3VVA" target="_blank" class="transition-all hover:text-gray-900 hover:underline">Slack</a>
+</li>
+</ul>
+</div>
+<div>
+<h2 class="mb-6 text-sm font-semibold text-gray-900">友情链接</h2>
+<ul class="text-sm text-gray-500">
+<li class="mb-4">
+<a href="https://www.fit2cloud.com/" target="_blank" class="transition-all hover:text-gray-900 hover:underline">FIT2CLOUD 飞致云</a>
+</li>
+<li class="mb-4">
+<a href="https://metersphere.com/?utm_source=halo" target="_blank" class="transition-all hover:text-gray-900 hover:underline">MeterSphere 专业测试云</a>
+</li>
+<li class="mb-4">
+<a href="https://1panel.cn/" target="_blank" class="transition-all hover:text-gray-900 hover:underline">1Panel - 开源 Linux 面板</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<hr class="my-6 border-gray-200 sm:mx-auto lg:my-8">
+<div class="container mx-auto sm:flex sm:items-center sm:justify-between">
+<div class="flex flex-wrap items-center justify-center gap-2 sm:justify-start">
+<span class="text-sm text-gray-500 sm:text-center">©2023 Halo All Rights Reserved 凌霞（深圳）软件有限公司</span>
+<a href="https://beian.miit.gov.cn/" target="_blank" class="text-sm text-gray-500 sm:text-center">粤ICP备2023013692号</a>
+</div>
+<div class="mt-4 flex flex-wrap justify-center gap-6 sm:mt-0 sm:justify-end">
+<a href="https://github.com/halo-dev" title="GitHub" class="" style="color:#181717">
+<i class="iconify size-4" data-icon="simple-icons:github"></i>
+</a><a href="https://gitee.com/halo-dev" title="Gitee" class="" style="color:#C71D23">
+<i class="iconify size-4" data-icon="simple-icons:gitee"></i>
+</a><a href="https://t.me/halo_dev" title="Telegram" class="" style="color:#26A5E4">
+<i class="iconify size-4" data-icon="simple-icons:telegram"></i>
+</a><a href="https://join.slack.com/t/halodev/shared_invite/zt-1j5i6vs8w-~oGKFM6R_~cpEO1irk3VVA" title="Slack" class="" style="color:#4A154B">
+<i class="iconify size-4" data-icon="simple-icons:slack"></i>
+</a><a href="../upload/store-resources/Wechatofficial.jpg" title="Wechat" class="" style="color:#9ec762">
+<i class="iconify size-4" data-icon="simple-icons:wechat"></i>
+</a><a href="https://space.bilibili.com/3493261769443630" title="Bilibili" class="" style="color:#00A1D6">
+<i class="iconify size-4" data-icon="simple-icons:bilibili"></i>
+</a>
+</div>
+</div>
+<div class="container mx-auto text-center sm:flex sm:items-center sm:justify-between">
+<span class="text-sm text-gray-500 sm:text-center">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VXXCS173XZ"></script>
+<script>window.dataLayer =window.dataLayer ||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-VXXCS173XZ');</script>
+<script>var _hmt =_hmt ||[];(function() {var hm =document.createElement("script");hm.src ="https://hm.baidu.com/hm.js?a6cd05879da2fa97c7b3e27d0b7f88bc";var s =document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","i9bm07950p");</script>
+<script>var _hmt =_hmt ||[];(function() {var hm =document.createElement("script");hm.src ="https://hm.baidu.com/hm.js?0180bb20bb6253b87f55220a3c6aee9d";var s =document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<p style="
+    text-align: left;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+">本站由 <a href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral" target="_blank"><img width="50" src="../upload/又拍云_logo5.png" alt="又拍云_logo5.png"></a> 提供 CDN 加速/云存储服务
+</p>
+</span>
+</div>
+</footer>
+</body>
+</html>
